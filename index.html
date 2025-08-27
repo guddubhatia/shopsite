@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BhatiaCards - Premium Printing Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #e74c3c;
+            --accent-color: #3498db;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        /* Header Styles - Improved Responsiveness */
+        header {
+            background-color: white;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            position: relative;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            z-index: 1001;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        .search-container {
+            position: relative;
+            margin-left: 20px;
+        }
+
+        .search-bar {
+            padding: 8px 15px;
+            padding-right: 40px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            width: 250px;
+        }
+
+        .search-btn {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--primary-color);
+            z-index: 1001;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        /* Categories Section */
+        .categories {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            margin: 15px auto;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .category-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .category-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .category-img {
+            height: 200px;
+            background-color: #ddd;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .category-content {
+            padding: 20px;
+        }
+
+        .category-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .expand-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 15px;
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        /* Collection Modal */
+        .collection-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1200;
+            overflow: auto;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background-color: white;
+            border-radius: 8px;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 30px;
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--primary-color);
+            background: none;
+            border: none;
+            z-index: 10;
+        }
+
+        .modal-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-img {
+            height: 180px;
+            background-color: #eee;
+            background-size: cover;
+            background-position: center;
+            cursor: pointer;
+        }
+
+        .product-content {
+            padding: 15px;
+        }
+
+        .product-title {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .product-code {
+            color: #777;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .download-options {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .download-btn {
+            padding: 5px 10px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+
+        .download-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* Product Modal */
+        .product-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1300;
+            overflow: auto;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .product-modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            margin: auto;
+            display: block;
+        }
+
+        .product-modal-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 80px 0;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .contact-info h3, .contact-form h3 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .contact-details {
+            margin-bottom: 30px;
+        }
+
+        .contact-details p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Company History Footer */
+        .company-history {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .history-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .history-content h2 {
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .history-content p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .founders {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .founder {
+            text-align: center;
+            max-width: 250px;
+        }
+
+        .founder-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: #ddd;
+            margin: 0 auto 15px;
+            overflow: hidden;
+        }
+
+        .founder h4 {
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        /* Responsive Design - Improved */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .nav-links {
+                gap: 20px;
+            }
+            
+            .search-bar {
+                width: 200px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-wrap: wrap;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 0;
+                right: -300px;
+                width: 300px;
+                height: 100vh;
+                background: white;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+                transition: right 0.3s ease;
+                z-index: 1000;
+                flex-direction: column;
+                padding: 80px 20px 20px;
+            }
+            
+            nav.active {
+                right: 0;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: 20px;
+                width: 100%;
+            }
+            
+            .search-container {
+                width: 100%;
+                margin: 20px 0 0;
+            }
+            
+            .search-bar {
+                width: 100%;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-content {
+                padding: 20px;
+                margin: 20px auto;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                height: 60vh;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .founders {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .header-container {
+                padding: 10px 15px;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container container">
+            <a href="#" class="logo">Bhatia<span>Cards</span></a>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="main-nav">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                
+                <div class="search-container">
+                    <input type="text" class="search-bar" placeholder="Search product code...">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Premium Printing Solutions</h1>
+            <p>Transforming your ideas into exquisite printed materials with unmatched quality and craftsmanship</p>
+            <a href="#categories" class="btn">Explore Our Products</a>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories container" id="categories">
+        <h2 class="section-title">Our Product Categories</h2>
+        
+        <div class="categories-grid">
+            <!-- Wedding Cards -->
+            <div class="category-card" data-category="wedding">
+                <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+                <div class="category-content">
+                    <h3>Wedding Cards</h3>
+                    <p>Elegant and traditional designs with gold accents for your special day.</p>
+                    <div class="expand-btn">
+                        <span>View Collection</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Visiting Cards -->
+            <div class="category-card" data-category="visiting">
+                <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1531496366077-8c6c2b68e7f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80');"></div>
+                <div class="category-content">
+                    <h3>Visiting Cards</h3>
+                    <p>Professional and modern business card designs that make a lasting impression.</p>
+                    <div class="expand-btn">
+                        <span>View Collection</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Birthday Cards -->
+            <div class="category-card" data-category="birthday">
+                <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+                <div class="category-content">
+                    <h3>Birthday Cards</h3>
+                    <p>Colorful and festive birthday-themed cards for all ages and occasions.</p>
+                    <div class="expand-btn">
+                        <span>View Collection</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Shagun Envelopes -->
+            <div class="category-card" data-category="shagun">
+                <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1600186604215-23a858fd9378?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80');"></div>
+                <div class="category-content">
+                    <h3>Shagun Envelopes</h3>
+                    <p>Red and gold traditional Indian envelopes for special occasions and gifts.</p>
+                    <div class="expand-btn">
+                        <span>View Collection</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sweet Boxes -->
+            <div class="category-card" data-category="sweet">
+                <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1586023492125-27a5ce4ce3ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80');"></div>
+                <div class="category-content">
+                    <h3>Sweet Boxes</h3>
+                    <p>Decorative gift boxes with intricate patterns for sweets and presents.</p>
+                    <div class="expand-btn">
+                        <span>View Collection</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Invitation Cards -->
+            <div class="category-card" data-category="invitation">
+                <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1519677100203-a0e668c92439?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+                <div class="category-content">
+                    <h3>Invitation Cards</h3>
+                    <p>Various event invitation designs for all your special occasions and celebrations.</p>
+                    <div class="expand-btn">
+                        <span>View Collection</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Modal -->
+    <div class="collection-modal" id="collectionModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2 class="modal-title" id="modalTitle">Product Collection</h2>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div class="product-modal" id="productModal">
+        <button class="product-modal-close" id="productModalClose">
+            <i class="fas fa-times"></i>
+        </button>
+        <img class="product-modal-content" id="productModalImage">
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <div class="contact-details">
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Printing Street, New Delhi, India</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> info@bhatiacards.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Sat: 9AM - 6PM</p>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Send us a Message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" class="form-control" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company History Footer -->
+    <footer class="company-history">
+        <div class="container history-content">
+            <h2>Our Story</h2>
+            <p>BhatiaCards was founded in 1985 by Ravinder Bhatia with a vision to provide premium printing solutions that combine traditional craftsmanship with modern innovation. Starting as a small neighborhood print shop, we've grown into a trusted name in the printing industry, serving clients across India.</p>
+            
+            <p>Today, under the leadership of Mohit Bhatia, we continue to uphold the values of quality, integrity, and customer satisfaction that our founder instilled in the company. We blend time-honored techniques with cutting-edge technology to create products that celebrate your special moments.</p>
+            
+            <div class="founders">
+                <div class="founder">
+                    <div class="founder-img"></div>
+                    <h4>Ravinder Bhatia</h4>
+                    <p>Founder (1985-2010)</p>
+                </div>
+                
+                <div class="founder">
+                    <div class="founder-img"></div>
+                    <h4>Mohit Bhatia</h4>
+                    <p>CEO (2010-Present)</p>
+                </div>
+            </div>
+            
+            <p>Our commitment to excellence has remained unchanged for over three decades. Each product that leaves our workshop carries the legacy of quality that the Bhatia name represents.</p>
+        </div>
+        
+        <div class="copyright">
+            <div class="container">
+                <p>&copy; 2023 BhatiaCards. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Product data for each category
+        const productData = {
+            wedding: [
+                { code: "WC-001", name: "Royal Gold Wedding Invitation", image: "https://images.unsplash.com/photo-1600271886742-f049cd47bbf1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" },
+                { code: "WC-002", name: "Traditional Red Wedding Card", image: "https://images.unsplash.com/photo-1601881142180-b2aee3caa4c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1365&q=80" },
+                { code: "WC-003", name: "Modern Floral Wedding Invite", image: "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" },
+                { code: "WC-004", name: "Luxury Embossed Wedding Card", image: "https://images.unsplash.com/photo-1519657337289-07770e575a7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" }
+            ],
+            visiting: [
+                { code: "VC-001", name: "Minimalist Business Card", image: "https://images.unsplash.com/photo-1544376798-89aa6b82c6cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1052&q=80" },
+                { code: "VC-002", name: "Luxury Foil Business Card", image: "https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" },
+                { code: "VC-003", name: "Creative Professional Card", image: "https://images.unsplash.com/photo-1544921153-fa51a8f78de7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" },
+                { code: "VC-004", name: "Corporate Executive Card", image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80" }
+            ],
+            birthday: [
+                { code: "BC-001", name: "Colorful Birthday Celebration Card", image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" },
+                { code: "BC-002", name: "Kids Birthday Party Invitation", image: "https://images.unsplash.com/photo-1531572753322-ad0635cc1210?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1066&q=80" },
+                { code: "BC-003", name: "Elegant Birthday Invitation", image: "https://images.unsplash.com/photo-1511984804822-e16ba72f5840?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80" },
+                { code: "BC-004", name: "Fun Birthday Celebration Card", image: "https://images.unsplash.com/photo-1531590878845-12627191e2aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2096&q=80" }
+            ],
+            shagun: [
+                { code: "SE-001", name: "Traditional Red & Gold Envelope", image: "https://images.unsplash.com/photo-1600186604215-23a858fd9378?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" },
+                { code: "SE-002", name: "Embroidered Shagun Envelope", image: "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" },
+                { code: "SE-003", name: "Festive Celebration Envelope", image: "https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" },
+                { code: "SE-004", name: "Golden Foil Shagun Packet", image: "https://images.unsplash.com/photo-1519452635267-53e17c9b6c1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" }
+            ],
+            sweet: [
+                { code: "SB-001", name: "Decorative Sweet Box with Ribbon", image: "https://images.unsplash.com/photo-1586023492125-27a5ce4ce3ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" },
+                { code: "SB-002", name: "Traditional Mithai Box", image: "https://images.unsplash.com/photo-1603535767666-00d7ffc3392c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" },
+                { code: "SB-003", name: "Elegant Gift Box", image: "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" },
+                { code: "SB-004", name: "Festive Sweet Container", image: "https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" }
+            ],
+            invitation: [
+                { code: "IC-001", name: "Elegant Event Invitation", image: "https://images.unsplash.com/photo-1519677100203-a0e668c92439?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" },
+                { code: "IC-002", name: "Anniversary Celebration Card", image: "https://images.unsplash.com/photo-1519452635267-53e17c9b6c1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" },
+                { code: "IC-003", name: "Baby Shower Invitation", image: "https://images.unsplash.com/photo-1592400374405-3bdb5dfc2514?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" },
+                { code: "IC-004", name: "Corporate Event Invite", image: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" }
+            ]
+        };
+
+        // Category titles mapping
+        const categoryTitles = {
+            wedding: "Wedding Cards Collection",
+            visiting: "Visiting Cards Collection",
+            birthday: "Birthday Cards Collection",
+            shagun: "Shagun Envelopes Collection",
+            sweet: "Sweet Boxes Collection",
+            invitation: "Invitation Cards Collection"
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const mainNav = document.getElementById('main-nav');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+                // Toggle between hamburger and close icon
+                const icon = this.querySelector('i');
+                if (icon.classList.contains('fa-bars')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+            
+            // Collection Modal functionality
+            const collectionModal = document.getElementById('collectionModal');
+            const modalClose = document.getElementById('modalClose');
+            const modalTitle = document.getElementById('modalTitle');
+            const productsGrid = document.getElementById('productsGrid');
+            const categoryCards = document.querySelectorAll('.category-card');
+            
+            categoryCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const category = this.getAttribute('data-category');
+                    showCollectionModal(category);
+                });
+            });
+            
+            function showCollectionModal(category) {
+                // Set modal title
+                modalTitle.textContent = categoryTitles[category];
+                
+                // Clear previous products
+                productsGrid.innerHTML = '';
+                
+                // Add products to modal
+                productData[category].forEach(product => {
+                    const productCard = document.createElement('div');
+                    productCard.className = 'product-card';
+                    productCard.innerHTML = `
+                        <div class="product-img" style="background-image: url('${product.image}')" data-fullsize="${product.image}"></div>
+                        <div class="product-content">
+                            <h4 class="product-title">${product.name}</h4>
+                            <p class="product-code">${product.code}</p>
+                            <div class="download-options">
+                                <button class="download-btn" data-image="${product.image}" data-format="jpg">JPG</button>
+                                <button class="download-btn" data-image="${product.image}" data-format="png">PNG</button>
+                                <button class="download-btn" data-image="${product.image}" data-format="pdf">PDF</button>
+                            </div>
+                        </div>
+                    `;
+                    productsGrid.appendChild(productCard);
+                });
+                
+                // Show the modal
+                collectionModal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+                
+                // Add event listeners to product images for fullscreen view
+                const productImages = document.querySelectorAll('.product-img');
+                productImages.forEach(image => {
+                    image.addEventListener('click', function() {
+                        const fullSizeImage = this.getAttribute('data-fullsize');
+                        showProductModal(fullSizeImage);
+                    });
+                });
+                
+                // Add event listeners to download buttons
+                const downloadButtons = document.querySelectorAll('.download-btn');
+                downloadButtons.forEach(button => {
+                    button.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        const imageUrl = this.getAttribute('data-image');
+                        const format = this.getAttribute('data-format');
+                        downloadImage(imageUrl, format);
+                    });
+                });
+            }
+            
+            modalClose.addEventListener('click', function() {
+                collectionModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+            
+            window.addEventListener('click', function(e) {
+                if (e.target === collectionModal) {
+                    collectionModal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+            
+            // Product Modal functionality
+            const productModal = document.getElementById('productModal');
+            const productModalClose = document.getElementById('productModalClose');
+            const productModalImage = document.getElementById('productModalImage');
+            
+            function showProductModal(imageUrl) {
+                productModalImage.src = imageUrl;
+                productModal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+            
+            productModalClose.addEventListener('click', function() {
+                productModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+            
+            window.addEventListener('click', function(e) {
+                if (e.target === productModal) {
+                    productModal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+            
+            // Download functionality
+            function downloadImage(imageUrl, format) {
+                // Create a temporary anchor element
+                const a = document.createElement('a');
+                a.href = imageUrl;
+                a.download = `bhatiacards-product.${format}`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                
+                // Show download confirmation
+                alert(`Downloading product in ${format.toUpperCase()} format`);
+            }
+            
+            // Search functionality
+            const searchBar = document.querySelector('.search-bar');
+            const searchBtn = document.querySelector('.search-btn');
+            
+            function searchProduct() {
+                const searchTerm = searchBar.value.trim().toUpperCase();
+                if (!searchTerm) return;
+                
+                // Search through all products
+                let foundProduct = null;
+                let foundCategory = null;
+                
+                for (const category in productData) {
+                    const product = productData[category].find(p => p.code.toUpperCase() === searchTerm);
+                    if (product) {
+                        foundProduct = product;
+                        foundCategory = category;
+                        break;
+                    }
+                }
+                
+                if (foundProduct) {
+                    // Show the collection modal with the found product
+                    showCollectionModal(foundCategory);
+                    
+                    // Scroll to the product in the modal
+                    setTimeout(() => {
+                        const productElement = Array.from(document.querySelectorAll('.product-code'))
+                            .find(el => el.textContent.toUpperCase() === searchTerm)
+                            .closest('.product-card');
+                        
+                        if (productElement) {
+                            productElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            productElement.style.boxShadow = '0 0 0 3px var(--secondary-color)';
+                            setTimeout(() => {
+                                productElement.style.boxShadow = '';
+                            }, 2000);
+                        }
+                    }, 500);
+                } else {
+                    alert('Product code not found. Please check the code and try again.');
+                }
+            }
+            
+            searchBtn.addEventListener('click', searchProduct);
+            searchBar.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    searchProduct();
+                }
+            });
+            
+            // Form submission
+            const contactForm = document.getElementById('contactForm');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message! We will get back to you soon.');
+                contactForm.reset();
+            });
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    // Close mobile menu if open
+                    if (mainNav.classList.contains('active')) {
+                        mainNav.classList.remove('active');
+                        mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+                        mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+                    }
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
