@@ -337,7 +337,7 @@
             margin-top: 15px;
         }
 
-        .download-btn {
+             .download-btn , .download-btn-jpg , .download-btn-png {
             padding: 5px 10px;
             background-color: var(--primary-color);
             color: white;
@@ -348,8 +348,8 @@
             border: none;
         }
 
-        .download-btn:hover {
-            background-color: var(--accent-color);
+       .download-btn:hover, .download-btn-jpg:hover, .download-btn-png:hover {
+        background-color: var(--accent-color);
         }
 
         /* Product Modal with Zoom */
@@ -990,8 +990,9 @@
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> -->
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
     <script>
            const productData = {
@@ -1738,8 +1739,8 @@
                             <h4 class="product-title">${product.name}</h4>
                             <p class="product-code">${product.code}</p>
                             <div class="download-options">
-                                <button class="download-btn" data-image="${product.image}" data-format="jpg">JPG</button>
-                                <button class="download-btn" data-image="${product.image}" data-format="png">PNG</button>
+                                <button class="download-btn-jpg" data-image="${product.image}" data-format="jpg">JPG</button>
+                                <button class="download-btn-png" data-image="${product.image}" data-format="png">PNG</button>
                                 <button class="download-btn" data-image="${product.image}" data-format="pdf">PDF</button>
                             </div>
                         </div>
@@ -1761,9 +1762,18 @@
                 });
                 
                 // Add event listeners to download buttons
-                const downloadButtons = document.querySelectorAll('.download-btn');
+             const downloadButtons = productsGrid.querySelectorAll(
+                    '.download-btn, .download-btn-jpg, .download-btn-png'
+                );
+
                 downloadButtons.forEach(button => {
-                    button.addEventListener('click', function(e) {
+                    button.replaceWith(button.cloneNode(true)); // remove old listeners
+                });
+
+                productsGrid.querySelectorAll(
+                    '.download-btn, .download-btn-jpg, .download-btn-png'
+                ).forEach(button => {
+                    button.addEventListener('click', function (e) {
                         e.stopPropagation();
                         const imageUrl = this.getAttribute('data-image');
                         const format = this.getAttribute('data-format');
@@ -1883,47 +1893,101 @@
             });
             
             // Download functionality
-          async  function downloadImage(imageUrl, format) {
-                const fileName = imageUrl.split('/').pop().split('?')[0];
+            async function downloadImage(imageUrl, format) {
+        const originalName = imageUrl.split('/').pop();
+        const safeName = sanitizeFileName(originalName, format);
 
-            if (format === 'pdf') {
-                try {
-                    // Generate PDF from the image
-                    const { jsPDF } = window.jspdf;
-                    const pdf = new jsPDF();
+        if (format === 'pdf') {
+            try {
+                const { jsPDF } = window.jspdf;
+                const pdf = new jsPDF();
 
-                    const imgData = await loadImageAsDataURL(imageUrl);
-                    // Add image to PDF (10,10 = margin, 180x160 = size, adjust if needed)
-                    pdf.addImage(imgData, "JPEG", 10, 10, 180, 160);
-                    
-                    // Save PDF with same name as original image but .pdf extension
-                    pdf.save(fileName.replace(/\.(jpg|jpeg|png)$/i, '.pdf'));
+                const imgData = await loadImageAsDataURL(imageUrl);
+                const img = await loadImage(imageUrl);
 
-                } catch (error) {
-                    console.error("Error generating PDF:", error);
-                    alert("Failed to create PDF. Downloading JPG instead.");
-                    triggerDownload(imageUrl, fileName);
-                }
-                } else {
-                    // For JPG and PNG, download the image directly
-                    triggerDownload(imageUrl, format);
-                }
+                // Scale image to fit PDF page
+                const pageWidth = pdf.internal.pageSize.getWidth();
+                const pageHeight = pdf.internal.pageSize.getHeight();
+                const ratio = Math.min(pageWidth / img.width, pageHeight / img.height);
+                const imgWidth = img.width * ratio;
+                const imgHeight = img.height * ratio;
+                const x = (pageWidth - imgWidth) / 2;
+                const y = (pageHeight - imgHeight) / 2;
+
+                pdf.addImage(imgData, "JPEG", x, y, imgWidth, imgHeight);
+                pdf.save(safeName.replace(/\.(jpg|jpeg|png)$/i, '.pdf'));
+
+            } catch (error) {
+                console.error("Error generating PDF:", error);
+                alert("Failed to create PDF. Downloading JPG instead.");
+                convertAndDownload(imageUrl, "image/jpeg", sanitizeFileName(originalName, "jpg"));
             }
-            
-            function triggerDownload(url, format) {
-                // Create a temporary anchor element
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = `bhatiacards-product.${format}`;
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                
-                // Show download confirmation
-                alert(`Downloading product in ${format.toUpperCase()} format`);
-            }
-            
-            // Search functionality
+        } else if (format === 'png') {
+            await convertAndDownload(imageUrl, "image/png", safeName);
+        } else if (format === 'jpg' || format === 'jpeg') {
+            await convertAndDownload(imageUrl, "image/jpeg", safeName);
+        }
+    }
+
+    // Convert image & trigger download
+    async function convertAndDownload(imageUrl, mimeType, fileName) {
+        const img = await loadImage(imageUrl);
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = img.width;
+        canvas.height = img.height;
+        ctx.drawImage(img, 0, 0);
+
+        const dataUrl = canvas.toDataURL(mimeType);
+
+        const a = document.createElement('a');
+        a.href = dataUrl;
+        a.download = fileName;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+
+        alert(`Downloading product in ${fileName.split('.').pop().toUpperCase()} format`);
+    }
+
+    // Sanitize file name
+    function sanitizeFileName(fileName, newExt) {
+        let base = fileName.split('?')[0];          // remove query params
+        base = base.replace(/\.+/g, '.');           // collapse multiple dots
+        base = base.replace(/\.(jpg|jpeg|png)$/i, ''); // strip old extension
+        base = base.replace(/[^a-zA-Z0-9_-]/g, ''); // keep only safe chars
+        return `${base}.${newExt}`;
+    }
+
+    // Load image element
+    function loadImage(url) {
+        return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.crossOrigin = "anonymous";
+            img.onload = () => resolve(img);
+            img.onerror = reject;
+            img.src = url;
+        });
+    }
+
+    // Load image as DataURL (for PDF)
+    function loadImageAsDataURL(url) {
+        return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.crossOrigin = "anonymous";
+            img.onload = () => {
+                const canvas = document.createElement("canvas");
+                canvas.width = img.width;
+                canvas.height = img.height;
+                const ctx = canvas.getContext("2d");
+                ctx.drawImage(img, 0, 0);
+                resolve(canvas.toDataURL("image/jpeg"));
+            };
+            img.onerror = reject;
+            img.src = url;
+        });
+    }  // Search functionality
             const searchBar = document.querySelector('.search-bar');
             const searchBtn = document.querySelector('.search-btn');
             
