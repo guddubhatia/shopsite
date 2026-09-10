@@ -1,0 +1,1078 @@
+const productData = {
+            "1100": [
+                { code: "1101", name: "1100 Series - 1101", image: "new_pdf/1100/1101..jpg" },
+                { code: "1101", name: "1100 Series - 1101", image: "new_pdf/1100/1101.jpg" },
+                { code:  "1102", name: "1100 Series - 1102", image: "new_pdf/1100/1102..jpg" },
+                { code: "1102", name: "1100 Series - 1102", image: "new_pdf/1100/1102.jpg" },
+                { code: "1103", name: "1100 Series - 1103", image: "new_pdf/1100/1103..jpg" },
+                { code: "1103", name: "1100 Series - 1103", image: "new_pdf/1100/1103.jpg" },
+                { code: "1104", name: "1100 Series - 1104", image: "new_pdf/1100/1104..jpg" },
+                { code: "1104", name: "1100 Series - 1104", image: "new_pdf/1100/1104.jpg" },
+                { code: "1105", name: "1100 Series - 1105", image: "new_pdf/1100/1105..jpg" },
+                { code: "1105", name: "1100 Series - 1105", image: "new_pdf/1100/1105.jpg" },
+                { code: "1106", name: "1100 Series - 1106", image: "new_pdf/1100/1106..jpg" },
+                { code: "1106", name: "1100 Series - 1106", image: "new_pdf/1100/1106.jpg" },
+                { code: "1107", name: "1100 Series - 1107", image: "new_pdf/1100/1107..jpg" },
+                { code: "1107", name: "1100 Series - 1107", image: "new_pdf/1100/1107.jpg" },
+                { code: "1108", name: "1100 Series - 1108", image: "new_pdf/1100/1108..jpg" },
+                { code: "1108", name: "1100 Series - 1108", image: "new_pdf/1100/1108.jpg" },
+                { code: "1109", name: "1100 Series - 1109", image: "new_pdf/1100/1109..jpg" },
+                { code: "1109", name: "1100 Series - 1109", image: "new_pdf/1100/1109.jpg" },
+                { code: "1110", name: "1100 Series - 1110", image: "new_pdf/1100/1110..jpg" },
+                { code: "1110", name: "1100 Series - 1110", image: "new_pdf/1100/1110.jpg" },
+                { code: "1111", name: "1100 Series - 1111", image: "new_pdf/1100/1111..jpg" },
+                { code: "1111", name: "1100 Series - 1111", image: "new_pdf/1100/1111.jpg" },
+                { code: "1112", name: "1100 Series - 1112", image: "new_pdf/1100/1112..jpg" },
+                { code: "1112", name: "1100 Series - 1112", image: "new_pdf/1100/1112.jpg" },
+                { code: "1114", name: "1100 Series - 1114", image: "new_pdf/1100/1114..jpg" },
+                { code: "1114", name: "1100 Series - 1114", image: "new_pdf/1100/1114.jpg" },
+                { code: "1115", name: "1100 Series - 1115", image: "new_pdf/1100/1115..jpg" },
+                { code: "1115", name: "1100 Series - 1115", image: "new_pdf/1100/1115.jpg" },
+                { code: "1116", name: "1100 Series - 1116", image: "new_pdf/1100/1116..jpg" },
+                { code: "1116", name: "1100 Series - 1116", image: "new_pdf/1100/1116.jpg" },
+                { code: "1117", name: "1100 Series - 1117", image: "new_pdf/1100/1117..jpg" },
+                { code: "1117", name: "1100 Series - 1117", image: "new_pdf/1100/1117.jpg" },
+                { code: "1118", name: "1100 Series - 1118", image: "new_pdf/1100/1118..jpg" },
+                { code: "1118", name: "1100 Series - 1118", image: "new_pdf/1100/1118.jpg" },
+                { code: "1119", name: "1100 Series - 1119", image: "new_pdf/1100/1119..jpg" },
+                { code: "1119", name: "1100 Series - 1119", image: "new_pdf/1100/1119.jpg" },
+                { code: "1120", name: "1100 Series - 1120", image: "new_pdf/1100/1120..jpg" },
+                { code: "1120", name: "1100 Series - 1120", image: "new_pdf/1100/1120.jpg" },
+                { code: "1121", name: "1100 Series - 1121", image: "new_pdf/1100/1121..jpg" },
+                { code: "1121", name: "1100 Series - 1121", image: "new_pdf/1100/1121.jpg" },
+                { code: "1122", name: "1100 Series - 1122", image: "new_pdf/1100/1122..jpg" },
+                { code: "1122", name: "1100 Series - 1122", image: "new_pdf/1100/1122.jpg" },
+                { code: "1123", name: "1100 Series - 1123", image: "new_pdf/1100/1123..jpg" },
+                { code: "1123", name: "1100 Series - 1123", image: "new_pdf/1100/1123.jpg" },
+                { code: "1124", name: "1100 Series - 1124", image: "new_pdf/1100/1124..jpg" },
+                { code: "1124", name: "1100 Series - 1124", image: "new_pdf/1100/1124.jpg" },
+                { code: "1125", name: "1100 Series - 1125", image: "new_pdf/1100/1125..jpg" },
+                { code: "1125", name: "1100 Series - 1125", image: "new_pdf/1100/1125.jpg" },
+                { code: "1126", name: "1100 Series - 1126", image: "new_pdf/1100/1126..jpg" },
+                { code: "1126", name: "1100 Series - 1126", image: "new_pdf/1100/1126.jpg" },
+                { code: "1127", name: "1100 Series - 1127", image: "new_pdf/1100/1127..jpg" },
+                { code: "1127", name: "1100 Series - 1127", image: "new_pdf/1100/1127.jpg" },
+                { code: "1128", name: "1100 Series - 1128", image: "new_pdf/1100/1128..jpg" },
+                { code: "1128", name: "1100 Series - 1128", image: "new_pdf/1100/1128.jpg" },
+                { code: "1129", name: "1100 Series - 1129", image: "new_pdf/1100/1129..jpg" },
+                { code: "1129", name: "1100 Series - 1129", image: "new_pdf/1100/1129.jpg" },
+                { code: "1130", name: "1100 Series - 1130", image: "new_pdf/1100/1130..jpg" },
+                { code: "1130", name: "1100 Series - 1130", image: "new_pdf/1100/1130.jpg" },
+                { code: "1131", name: "1100 Series - 1131", image: "new_pdf/1100/1131.jpg" },
+                { code: "1132", name: "1100 Series - 1132", image: "new_pdf/1100/1132..jpg" },
+                { code: "1132", name: "1100 Series - 1132", image: "new_pdf/1100/1132.jpg" },
+                { code: "1133", name: "1100 Series - 1133", image: "new_pdf/1100/1133..jpg" },
+                { code: "1133", name: "1100 Series - 1133", image: "new_pdf/1100/1133.jpg" },
+                { code: "1134", name: "1100 Series - 1134", image: "new_pdf/1100/1134..jpg" },
+                { code: "1134", name: "1100 Series - 1134", image: "new_pdf/1100/1134.jpg" },
+                { code: "1135", name: "1100 Series - 1135", image: "new_pdf/1100/1135..jpg" },
+                { code: "1135", name: "1100 Series - 1135", image: "new_pdf/1100/1135.jpg" },
+                { code: "1136", name: "1100 Series - 1136", image: "new_pdf/1100/1136..jpg" },
+                { code: "1136", name: "1100 Series - 1136", image: "new_pdf/1100/1136.jpg" },
+                { code: "1137", name: "1100 Series - 1137", image: "new_pdf/1100/1137..jpg" },
+                { code: "1137", name: "1100 Series - 1137", image: "new_pdf/1100/1137.jpg" },
+                { code: "1138", name: "1100 Series - 1138", image: "new_pdf/1100/1138..jpg" },
+                { code: "1138", name: "1100 Series - 1138", image: "new_pdf/1100/1138.jpg" },
+                { code: "1139", name: "1100 Series - 1139", image: "new_pdf/1100/1139..jpg" },
+                { code: "1139", name: "1100 Series - 1139", image: "new_pdf/1100/1139.jpg" },
+                { code: "1140", name: "1100 Series - 1140", image: "new_pdf/1100/1140..jpg" },
+                { code: "1140", name: "1100 Series - 1140", image: "new_pdf/1100/1140.jpg" },
+                { code: "1141", name: "1100 Series - 1141", image: "new_pdf/1100/1141..jpg" },
+                { code: "1141", name: "1100 Series - 1141", image: "new_pdf/1100/1141.jpg" },
+                { code: "1142", name: "1100 Series - 1142", image: "new_pdf/1100/1142..jpg" },
+                { code: "1142", name: "1100 Series - 1142", image: "new_pdf/1100/1142.jpg" },
+                { code: "1143", name: "1100 Series - 1143", image: "new_pdf/1100/1143..jpg" },
+                { code: "1143", name: "1100 Series - 1143", image: "new_pdf/1100/1143.jpg" },
+                { code: "1144", name: "1100 Series - 1144", image: "new_pdf/1100/1144..jpg" },
+                { code: "1144", name: "1100 Series - 1144", image: "new_pdf/1100/1144.jpg" },
+                { code: "1145", name: "1100 Series - 1145", image: "new_pdf/1100/1145..jpg" },
+                { code: "1145", name: "1100 Series - 1145", image: "new_pdf/1100/1145.jpg" },
+                { code: "1146", name: "1100 Series - 1146", image: "new_pdf/1100/1146..jpg" },
+                { code: "1146", name: "1100 Series - 1146", image: "new_pdf/1100/1146.jpg" },
+                { code: "1147", name: "1100 Series - 1147", image: "new_pdf/1100/1147..jpg" },
+                { code: "1147", name: "1100 Series - 1147", image: "new_pdf/1100/1147.jpg" },
+                { code: "1148", name: "1100 Series - 1148", image: "new_pdf/1100/1148..jpg" },
+                { code: "1148", name: "1100 Series - 1148", image: "new_pdf/1100/1148.jpg" },
+                { code: "1149", name: "1100 Series - 1149", image: "new_pdf/1100/1149..jpg" },
+                { code: "1149", name: "1100 Series - 1149", image: "new_pdf/1100/1149.jpg" },
+                { code: "1150", name: "1100 Series - 1150", image: "new_pdf/1100/1150..jpg" },
+                { code: "1150", name: "1100 Series - 1150", image: "new_pdf/1100/1150.jpg" }
+            ],
+            "1200": [
+                { code: "1201", name: "1200 Series - 1201", image: "new_pdf/1200/1201.jpg" },
+                { code: "1201", name: "1200 Series - 1201", image: "new_pdf/1200/1201..jpg" },
+                { code: "1202", name: "1200 Series - 1202", image: "new_pdf/1200/1202.jpg" },
+                { code: "1202", name: "1200 Series - 1202", image: "new_pdf/1200/1202..jpg" },
+                { code: "1203", name: "1200 Series - 1203", image: "new_pdf/1200/1203.jpg" },
+                { code: "1203", name: "1200 Series - 1203", image: "new_pdf/1200/1203..jpg" },
+                { code: "1204", name: "1200 Series - 1204", image: "new_pdf/1200/1204.jpg" },
+                { code: "1204", name: "1200 Series - 1204", image: "new_pdf/1200/1204..jpg" },
+                { code: "1205", name: "1200 Series - 1205", image: "new_pdf/1200/1205.jpg" },
+                { code: "1205", name: "1200 Series - 1205", image: "new_pdf/1200/1205..jpg" },
+                { code: "1206", name: "1200 Series - 1206", image: "new_pdf/1200/1206.jpg" },
+                { code: "1206", name: "1200 Series - 1206", image: "new_pdf/1200/1206..jpg" },
+                { code: "1207", name: "1200 Series - 1207", image: "new_pdf/1200/1207.jpg" },
+                { code: "1207", name: "1200 Series - 1207", image: "new_pdf/1200/1207..jpg" },
+                { code: "1208", name: "1200 Series - 1208", image: "new_pdf/1200/1208.jpg" },
+                { code: "1208", name: "1200 Series - 1208", image: "new_pdf/1200/1208..jpg" },
+                { code: "1210", name: "1200 Series - 1210", image: "new_pdf/1200/1210.jpg" },
+                { code: "1210", name: "1200 Series - 1210", image: "new_pdf/1200/1210..jpg" },
+                { code: "1211", name: "1200 Series - 1211", image: "new_pdf/1200/1211.jpg" },
+                { code: "1211", name: "1200 Series - 1211", image: "new_pdf/1200/1211..jpg" },
+                { code: "1212", name: "1200 Series - 1212", image: "new_pdf/1200/1212.jpg" },
+                { code: "1212", name: "1200 Series - 1212", image: "new_pdf/1200/1212..jpg" },
+                { code: "1213", name: "1200 Series - 1213", image: "new_pdf/1200/1213.jpg" },
+                { code: "1213", name: "1200 Series - 1213", image: "new_pdf/1200/1213..jpg" },
+                { code: "1214", name: "1200 Series - 1214", image: "new_pdf/1200/1214.jpg" },
+                { code: "1214", name: "1200 Series - 1214", image: "new_pdf/1200/1214..jpg" },
+                { code: "1215", name: "1200 Series - 1215", image: "new_pdf/1200/1215.jpg" },
+                { code: "1215", name: "1200 Series - 1215", image: "new_pdf/1200/1215..jpg" },
+                { code: "1216", name: "1200 Series - 1216", image: "new_pdf/1200/1216.jpg" },
+                { code: "1216", name: "1200 Series - 1216", image: "new_pdf/1200/1216..jpg" },
+                { code: "1218", name: "1200 Series - 1218", image: "new_pdf/1200/1218.jpg" },
+                { code: "1218", name: "1200 Series - 1218", image: "new_pdf/1200/1218..jpg" },
+                { code: "1219", name: "1200 Series - 1219", image: "new_pdf/1200/1219.jpg" },
+                { code: "1219", name: "1200 Series - 1219", image: "new_pdf/1200/1219..jpg" },
+                { code: "1220", name: "1200 Series - 1220", image: "new_pdf/1200/1220.jpg" },
+                { code: "1220", name: "1200 Series - 1220", image: "new_pdf/1200/1220..jpg" },
+                { code: "1221", name: "1200 Series - 1221", image: "new_pdf/1200/1221.jpg" },
+                { code: "1221", name: "1200 Series - 1221", image: "new_pdf/1200/1221..jpg" },
+                { code: "1222", name: "1200 Series - 1222", image: "new_pdf/1200/1222.jpg" },
+                { code: "1222", name: "1200 Series - 1222", image: "new_pdf/1200/1222..jpg" },
+                { code: "1223", name: "1200 Series - 1223", image: "new_pdf/1200/1223.jpg" },
+                { code: "1223", name: "1200 Series - 1223", image: "new_pdf/1200/1223..jpg" },
+                { code: "1224", name: "1200 Series - 1224", image: "new_pdf/1200/1224.jpg" },
+                { code: "1224", name: "1200 Series - 1224", image: "new_pdf/1200/1224..jpg" },
+                { code: "1225", name: "1200 Series - 1225", image: "new_pdf/1200/1225.jpg" },
+                { code: "1225", name: "1200 Series - 1225", image: "new_pdf/1200/1225..jpg" },
+                { code: "1226", name: "1200 Series - 1226", image: "new_pdf/1200/1226.jpg" },
+                { code: "1226", name: "1200 Series - 1226", image: "new_pdf/1200/1226..jpg" },
+                { code: "1228", name: "1200 Series - 1228", image: "new_pdf/1200/1228.jpg" },
+                { code: "1228", name: "1200 Series - 1228", image: "new_pdf/1200/1228..jpg" },
+                { code: "1229", name: "1200 Series - 1229", image: "new_pdf/1200/1229.jpg" },
+                { code: "1229", name: "1200 Series - 1229", image: "new_pdf/1200/1229..jpg" },
+                { code: "1230", name: "1200 Series - 1230", image: "new_pdf/1200/1230.jpg" },
+                { code: "1230", name: "1200 Series - 1230", image: "new_pdf/1200/1230..jpg" },
+                { code: "1231", name: "1200 Series - 1231", image: "new_pdf/1200/1231.jpg" },
+                { code: "1231", name: "1200 Series - 1231", image: "new_pdf/1200/1231..jpg" },
+                { code: "1232", name: "1200 Series - 1232", image: "new_pdf/1200/1232.jpg" },
+                { code: "1232", name: "1200 Series - 1232", image: "new_pdf/1200/1232..jpg" },
+                { code: "1233", name: "1200 Series - 1233", image: "new_pdf/1200/1233.jpg" },
+                { code: "1233", name: "1200 Series - 1233", image: "new_pdf/1200/1233..jpg" },
+                { code: "1234", name: "1200 Series - 1234", image: "new_pdf/1200/1234.jpg" },
+                { code: "1234", name: "1200 Series - 1234", image: "new_pdf/1200/1234..jpg" },
+                { code: "1235", name: "1200 Series - 1235", image: "new_pdf/1200/1235.jpg" },
+                { code: "1235", name: "1200 Series - 1235", image: "new_pdf/1200/1235..jpg" },
+                { code: "1236", name: "1200 Series - 1236", image: "new_pdf/1200/1236.jpg" },
+                { code: "1236", name: "1200 Series - 1236", image: "new_pdf/1200/1236..jpg" },
+                { code: "1237", name: "1200 Series - 1237", image: "new_pdf/1200/1237.jpg" },
+                { code: "1237", name: "1200 Series - 1237", image: "new_pdf/1200/1237..jpg" },
+                { code: "1238", name: "1200 Series - 1238", image: "new_pdf/1200/1238.jpg" },
+                { code: "1238", name: "1200 Series - 1238", image: "new_pdf/1200/1238..jpg" },
+                { code: "1239", name: "1200 Series - 1239", image: "new_pdf/1200/1239.jpg" },
+                { code: "1239", name: "1200 Series - 1239", image: "new_pdf/1200/1239..jpg" },
+                { code: "1240", name: "1200 Series - 1240", image: "new_pdf/1200/1240.jpg" },
+                { code: "1240", name: "1200 Series - 1240", image: "new_pdf/1200/1240..jpg" },
+                { code: "1241", name: "1200 Series - 1241", image: "new_pdf/1200/1241.jpg" },
+                { code: "1241", name: "1200 Series - 1241", image: "new_pdf/1200/1241..jpg" },
+                { code: "1243", name: "1200 Series - 1243", image: "new_pdf/1200/1243.jpg" },
+                { code: "1243", name: "1200 Series - 1243", image: "new_pdf/1200/1243..jpg" },
+                { code: "1244", name: "1200 Series - 1244", image: "new_pdf/1200/1244.jpg" },
+                { code: "1244", name: "1200 Series - 1244", image: "new_pdf/1200/1244..jpg" },
+                { code: "1245", name: "1200 Series - 1245", image: "new_pdf/1200/1245.jpg" },
+                { code: "1245", name: "1200 Series - 1245", image: "new_pdf/1200/1245..jpg" },
+                { code: "1247", name: "1200 Series - 1247", image: "new_pdf/1200/1247.jpg" },
+                { code: "1247", name: "1200 Series - 1247", image: "new_pdf/1200/1247..jpg" },
+                { code: "1248", name: "1200 Series - 1248", image: "new_pdf/1200/1248.jpg" },
+                { code: "1248", name: "1200 Series - 1248", image: "new_pdf/1200/1248..jpg" },
+                { code: "1249", name: "1200 Series - 1249", image: "new_pdf/1200/1249.jpg" },
+                { code: "1249", name: "1200 Series - 1249", image: "new_pdf/1200/1249..jpg" },
+                { code: "1251", name: "1200 Series - 1251", image: "new_pdf/1200/1251.jpg" },
+                { code: "1251", name: "1200 Series - 1251", image: "new_pdf/1200/1251..jpg" },
+                { code: "1252", name: "1200 Series - 1252", image: "new_pdf/1200/1252.jpg" },
+                { code: "1252", name: "1200 Series - 1252", image: "new_pdf/1200/1252..jpg" },
+                { code: "1253", name: "1200 Series - 1253", image: "new_pdf/1200/1253.jpg" },
+                { code: "1253", name: "1200 Series - 1253", image: "new_pdf/1200/1253..jpg" },
+                { code: "1254", name: "1200 Series - 1254", image: "new_pdf/1200/1254.jpg" },
+                { code: "1254", name: "1200 Series - 1254", image: "new_pdf/1200/1254..jpg" },
+                { code: "1255", name: "1200 Series - 1255", image: "new_pdf/1200/1255.jpg" },
+                { code: "1255", name: "1200 Series - 1255", image: "new_pdf/1200/1255..jpg" },
+                { code: "1256", name: "1200 Series - 1256", image: "new_pdf/1200/1256.jpg" },
+                { code: "1256", name: "1200 Series - 1256", image: "new_pdf/1200/1256..jpg" },
+                { code: "1257", name: "1200 Series - 1257", image: "new_pdf/1200/1257.jpg" },
+                { code: "1257", name: "1200 Series - 1257", image: "new_pdf/1200/1257..jpg" },
+                { code: "1258", name: "1200 Series - 1258", image: "new_pdf/1200/1258.jpg" },
+                { code: "1258", name: "1200 Series - 1258", image: "new_pdf/1200/1258..jpg" },
+                { code: "1260", name: "1200 Series - 1260", image: "new_pdf/1200/1260.jpg" },
+                { code: "1260", name: "1200 Series - 1260", image: "new_pdf/1200/1260..jpg" },
+                { code: "1261", name: "1200 Series - 1261", image: "new_pdf/1200/1261.jpg" },
+                { code: "1261", name: "1200 Series - 1261", image: "new_pdf/1200/1261..jpg" },
+                { code: "1262", name: "1200 Series - 1262", image: "new_pdf/1200/1262.jpg" },
+                { code: "1262", name: "1200 Series - 1262", image: "new_pdf/1200/1262..jpg" },
+                { code: "1263", name: "1200 Series - 1263", image: "new_pdf/1200/1263.jpg" },
+                { code: "1263", name: "1200 Series - 1263", image: "new_pdf/1200/1263..jpg" },
+                { code: "1264", name: "1200 Series - 1264", image: "new_pdf/1200/1264.jpg" },
+                { code: "1264", name: "1200 Series - 1264", image: "new_pdf/1200/1264..jpg" },
+                { code: "1265", name: "1200 Series - 1265", image: "new_pdf/1200/1265..jpg" },
+                { code: "1266", name: "1200 Series - 1266", image: "new_pdf/1200/1266.jpg" },
+                { code: "1267", name: "1200 Series - 1267", image: "new_pdf/1200/1267..jpg" },
+                { code: "1268", name: "1200 Series - 1268", image: "new_pdf/1200/1268.jpg" },
+                { code: "1270", name: "1200 Series - 1270", image: "new_pdf/1200/1270.jpg" },
+                { code: "1270", name: "1200 Series - 1270", image: "new_pdf/1200/1270..jpg" },
+                { code: "1271", name: "1200 Series - 1271", image: "new_pdf/1200/1271.jpg" },
+                { code: "1271", name: "1200 Series - 1271", image: "new_pdf/1200/1271..jpg" },
+                { code: "1272", name: "1200 Series - 1272", image: "new_pdf/1200/1272.jpg" },
+                { code: "1272", name: "1200 Series - 1272", image: "new_pdf/1200/1272..jpg" },
+                { code: "1273", name: "1200 Series - 1273", image: "new_pdf/1200/1273.jpg" },
+                { code: "1273", name: "1200 Series - 1273", image: "new_pdf/1200/1273..jpg" },
+                { code: "1274", name: "1200 Series - 1274", image: "new_pdf/1200/1274.jpg" },
+                { code: "1274", name: "1200 Series - 1274", image: "new_pdf/1200/1274..jpg" },
+                { code: "1275", name: "1200 Series - 1275", image: "new_pdf/1200/1275.jpg" },
+                { code: "1275", name: "1200 Series - 1275", image: "new_pdf/1200/1275..jpg" },
+                { code: "1276", name: "1200 Series - 1276", image: "new_pdf/1200/1276.jpg" },
+                { code: "1276", name: "1200 Series - 1276", image: "new_pdf/1200/1276..jpg" },
+                { code: "1277", name: "1200 Series - 1277", image: "new_pdf/1200/1277.jpg" },
+                { code: "1277", name: "1200 Series - 1277", image: "new_pdf/1200/1277..jpg" },
+                { code: "1278", name: "1200 Series - 1278", image: "new_pdf/1200/1278.jpg" },
+                { code: "1278", name: "1200 Series - 1278", image: "new_pdf/1200/1278..jpg" },
+                { code: "1280", name: "1200 Series - 1280", image: "new_pdf/1200/1280..jpg" },
+                { code: "1281", name: "1200 Series - 1281", image: "new_pdf/1200/1281.jpg" },
+                { code: "1281", name: "1200 Series - 1281", image: "new_pdf/1200/1281..jpg" },
+                { code: "1282", name: "1200 Series - 1282", image: "new_pdf/1200/1282.jpg" },
+                { code: "1282", name: "1200 Series - 1282", image: "new_pdf/1200/1282..jpg" },
+                { code: "1283", name: "1200 Series - 1283", image: "new_pdf/1200/1283.jpg" },
+                { code: "1283", name: "1200 Series - 1283", image: "new_pdf/1200/1283..jpg" },
+                { code: "1284", name: "1200 Series - 1284", image: "new_pdf/1200/1284.jpg" },
+                { code: "1284", name: "1200 Series - 1284", image: "new_pdf/1200/1284..jpg" },
+                { code: "1285", name: "1200 Series - 1285", image: "new_pdf/1200/1285.jpg" },
+                { code: "1285", name: "1200 Series - 1285", image: "new_pdf/1200/1285..jpg" },
+                { code: "1286", name: "1200 Series - 1286", image: "new_pdf/1200/1286.jpg" },
+                { code: "1286", name: "1200 Series - 1286", image: "new_pdf/1200/1286..jpg" },
+                { code: "1287", name: "1200 Series - 1287", image: "new_pdf/1200/1287.jpg" },
+                { code: "1287", name: "1200 Series - 1287", image: "new_pdf/1200/1287..jpg" },
+                { code: "1288", name: "1200 Series - 1288", image: "new_pdf/1200/1288.jpg" },
+                { code: "1288", name: "1200 Series - 1288", image: "new_pdf/1200/1288..jpg" },
+                { code: "1290", name: "1200 Series - 1290", image: "new_pdf/1200/1290.jpg" },
+                { code: "1290", name: "1200 Series - 1290", image: "new_pdf/1200/1290..jpg" },
+                { code: "1291", name: "1200 Series - 1291", image: "new_pdf/1200/1291.jpg" },
+                { code: "1291", name: "1200 Series - 1291", image: "new_pdf/1200/1291..jpg" },
+                { code: "1292", name: "1200 Series - 1292", image: "new_pdf/1200/1292.jpg" },
+                { code: "1292", name: "1200 Series - 1292", image: "new_pdf/1200/1292..jpg" },
+                { code: "1293", name: "1200 Series - 1293", image: "new_pdf/1200/1293.jpg" },
+                { code: "1293", name: "1200 Series - 1293", image: "new_pdf/1200/1293..jpg" },
+                { code: "1294", name: "1200 Series - 1294", image: "new_pdf/1200/1294.jpg" },
+                { code: "1294", name: "1200 Series - 1294", image: "new_pdf/1200/1294..jpg" },
+                { code: "1295", name: "1200 Series - 1295", image: "new_pdf/1200/1295.jpg" },
+                { code: "1295", name: "1200 Series - 1295", image: "new_pdf/1200/1295..jpg" },
+                { code: "1296", name: "1200 Series - 1296", image: "new_pdf/1200/1296.jpg" },
+                { code: "1296", name: "1200 Series - 1296", image: "new_pdf/1200/1296..jpg" },
+                { code: "1297", name: "1200 Series - 1297", image: "new_pdf/1200/1297.jpg" },
+                { code: "1297", name: "1200 Series - 1297", image: "new_pdf/1200/1297..jpg" },
+                { code: "1298", name: "1200 Series - 1298", image: "new_pdf/1200/1298.jpg" },
+                { code: "1298", name: "1200 Series - 1298", image: "new_pdf/1200/1298..jpg" },
+                { code: "1299", name: "1200 Series - 1299", image: "new_pdf/1200/1299.jpg" },
+                { code: "1299", name: "1200 Series - 1299", image: "new_pdf/1200/1299..jpg" }
+            ],
+            "1300": [
+                { code: "1300", name: "1300 Series - 1300", image: "new_pdf/1300/1300..jpg" },
+                { code: "1301", name: "1300 Series - 1301", image: "new_pdf/1300/1301..jpg" },
+                { code: "1302", name: "1300 Series - 1302", image: "new_pdf/1300/1302..jpg" },
+                { code: "1302", name: "1300 Series - 1302", image: "new_pdf/1300/1302.jpg" },
+                { code: "1303", name: "1300 Series - 1303", image: "new_pdf/1300/1303..jpg" },
+                { code: "1303", name: "1300 Series - 1303", image: "new_pdf/1300/1303.jpg" },
+                { code: "1304", name: "1300 Series - 1304", image: "new_pdf/1300/1304..jpg" },
+                { code: "1304", name: "1300 Series - 1304", image: "new_pdf/1300/1304.jpg" },
+                { code: "1305", name: "1300 Series - 1305", image: "new_pdf/1300/1305..jpg" },
+                { code: "1305", name: "1300 Series - 1305", image: "new_pdf/1300/1305.jpg" },
+                { code: "1306", name: "1300 Series - 1306", image: "new_pdf/1300/1306.jpg" },
+                { code: "1307", name: "1300 Series - 1307", image: "new_pdf/1300/1307.jpg" },
+                { code: "1307", name: "1300 Series - 1307", image: "new_pdf/1300/1307..jpg" },
+                { code: "1308", name: "1300 Series - 1308", image: "new_pdf/1300/1308.jpg" },
+                { code: "1308", name: "1300 Series - 1308", image: "new_pdf/1300/1308..jpg" },
+                { code: "1309", name: "1300 Series - 1309", image: "new_pdf/1300/1309.jpg" },
+                { code: "1309", name: "1300 Series - 1309", image: "new_pdf/1300/1309..jpg" },
+                { code: "1310", name: "1300 Series - 1310", image: "new_pdf/1300/1310..jpg" },
+                { code: "1311", name: "1300 Series - 1311", image: "new_pdf/1300/1311.jpg" },
+                { code: "1311", name: "1300 Series - 1311", image: "new_pdf/1300/1311..jpg" },
+                { code: "1312", name: "1300 Series - 1312", image: "new_pdf/1300/1312.jpg" },
+                { code: "1312", name: "1300 Series - 1312", image: "new_pdf/1300/1312..jpg" },
+                { code: "1313", name: "1300 Series - 1313", image: "new_pdf/1300/1313.jpg" },
+                { code: "1314", name: "1300 Series - 1314", image: "new_pdf/1300/1314.jpg" },
+                { code: "1314", name: "1300 Series - 1314", image: "new_pdf/1300/1314..jpg" },
+                { code: "1315", name: "1300 Series - 1315", image: "new_pdf/1300/1315..jpg" },
+                { code: "1316", name: "1300 Series - 1316", image: "new_pdf/1300/1316.jpg" },
+                { code: "1316", name: "1300 Series - 1316", image: "new_pdf/1300/1316..jpg" },
+                { code: "1317", name: "1300 Series - 1317", image: "new_pdf/1300/1317.jpg" },
+                { code: "1317", name: "1300 Series - 1317", image: "new_pdf/1300/1317..jpg" },
+                { code: "1318", name: "1300 Series - 1318", image: "new_pdf/1300/1318.jpg" },
+                { code: "1318", name: "1300 Series - 1318", image: "new_pdf/1300/1318..jpg" },
+                { code: "1319", name: "1300 Series - 1319", image: "new_pdf/1300/1319.jpg" },
+                { code: "1319", name: "1300 Series - 1319", image: "new_pdf/1300/1319..jpg" },
+                { code: "1320", name: "1300 Series - 1320", image: "new_pdf/1300/1320.jpg" },
+                { code: "1320", name: "1300 Series - 1320", image: "new_pdf/1300/1320..jpg" },
+                { code: "1321", name: "1300 Series - 1321", image: "new_pdf/1300/1321.jpg" },
+                { code: "1321", name: "1300 Series - 1321", image: "new_pdf/1300/1321..jpg" },
+                { code: "1322", name: "1300 Series - 1322", image: "new_pdf/1300/1322.jpg" },
+                { code: "1322", name: "1300 Series - 1322", image: "new_pdf/1300/1322..jpg" },
+                { code: "1323", name: "1300 Series - 1323", image: "new_pdf/1300/1323.jpg" },
+                { code: "1323", name: "1300 Series - 1323", image: "new_pdf/1300/1323..jpg" },
+                { code: "1324", name: "1300 Series - 1324", image: "new_pdf/1300/1324.jpg" },
+                { code: "1324", name: "1300 Series - 1324", image: "new_pdf/1300/1324..jpg" },
+                { code: "1325", name: "1300 Series - 1325", image: "new_pdf/1300/1325.jpg" },
+                { code: "1325", name: "1300 Series - 1325", image: "new_pdf/1300/1325..jpg" },
+                { code: "1326", name: "1300 Series - 1326", image: "new_pdf/1300/1326.jpg" },
+                { code: "1326", name: "1300 Series - 1326", image: "new_pdf/1300/1326..jpg" },
+                { code: "1327", name: "1300 Series - 1327", image: "new_pdf/1300/1327.jpg" },
+                { code: "1327", name: "1300 Series - 1327", image: "new_pdf/1300/1327..jpg" },
+                { code: "1328", name: "1300 Series - 1328", image: "new_pdf/1300/1328.jpg" },
+                { code: "1328", name: "1300 Series - 1328", image: "new_pdf/1300/1328..jpg" },
+                { code: "1329", name: "1300 Series - 1329", image: "new_pdf/1300/1329.jpg" },
+                { code: "1329", name: "1300 Series - 1329", image: "new_pdf/1300/1329..jpg" },
+                { code: "1330", name: "1300 Series - 1330", image: "new_pdf/1300/1330.jpg" },
+                { code: "1330", name: "1300 Series - 1330", image: "new_pdf/1300/1330..jpg" },
+                { code: "1331", name: "1300 Series - 1331", image: "new_pdf/1300/1331.jpg" },
+                { code: "1331", name: "1300 Series - 1331", image: "new_pdf/1300/1331..jpg" },
+                { code: "1332", name: "1300 Series - 1332", image: "new_pdf/1300/1332.jpg" },
+                { code: "1332", name: "1300 Series - 1332", image: "new_pdf/1300/1332..jpg" },
+                { code: "1333", name: "1300 Series - 1333", image: "new_pdf/1300/1333.jpg" },
+                { code: "1333", name: "1300 Series - 1333", image: "new_pdf/1300/1333..jpg" },
+                { code: "1334", name: "1300 Series - 1334", image: "new_pdf/1300/1334.jpg" },
+                { code: "1334", name: "1300 Series - 1334", image: "new_pdf/1300/1334..jpg" },
+                { code: "1335", name: "1300 Series - 1335", image: "new_pdf/1300/1335.jpg" },
+                { code: "1335", name: "1300 Series - 1335", image: "new_pdf/1300/1335..jpg" },
+                { code: "1336", name: "1300 Series - 1336", image: "new_pdf/1300/1336.jpg" },
+                { code: "1336", name: "1300 Series - 1336", image: "new_pdf/1300/1336..jpg" },
+                { code: "1337", name: "1300 Series - 1337", image: "new_pdf/1300/1337.jpg" },
+                { code: "1337", name: "1300 Series - 1337", image: "new_pdf/1300/1337..jpg" },
+                { code: "1338", name: "1300 Series - 1338", image: "new_pdf/1300/1338.jpg" },
+                { code: "1338", name: "1300 Series - 1338", image: "new_pdf/1300/1338..jpg" },
+                { code: "1339", name: "1300 Series - 1339", image: "new_pdf/1300/1339.jpg" },
+                { code: "1339", name: "1300 Series - 1339", image: "new_pdf/1300/1339..jpg" },
+                { code: "1340", name: "1300 Series - 1340", image: "new_pdf/1300/1340.jpg" },
+                { code: "1340", name: "1300 Series - 1340", image: "new_pdf/1300/1340..jpg" },
+                { code: "1341", name: "1300 Series - 1341", image: "new_pdf/1300/1341.jpg" },
+                { code: "1341", name: "1300 Series - 1341", image: "new_pdf/1300/1341..jpg" },
+                { code: "1342", name: "1300 Series - 1342", image: "new_pdf/1300/1342.jpg" },
+                { code: "1342", name: "1300 Series - 1342", image: "new_pdf/1300/1342..jpg" },
+                { code: "1343", name: "1300 Series - 1343", image: "new_pdf/1300/1343.jpg" },
+                { code: "1343", name: "1300 Series - 1343", image: "new_pdf/1300/1343..jpg" },
+                { code: "1345", name: "1300 Series - 1345", image: "new_pdf/1300/1345.jpg" },
+                { code: "1345", name: "1300 Series - 1345", image: "new_pdf/1300/1345..jpg" },
+                { code: "1346", name: "1300 Series - 1346", image: "new_pdf/1300/1346.jpg" },
+                { code: "1346", name: "1300 Series - 1346", image: "new_pdf/1300/1346..jpg" },
+                { code: "1347", name: "1300 Series - 1347", image: "new_pdf/1300/1347.jpg" },
+                { code: "1347", name: "1300 Series - 1347", image: "new_pdf/1300/1347..jpg" },
+                { code: "1348", name: "1300 Series - 1348", image: "new_pdf/1300/1348.jpg" },
+                { code: "1348", name: "1300 Series - 1348", image: "new_pdf/1300/1348..jpg" },
+                { code: "1349", name: "1300 Series - 1349", image: "new_pdf/1300/1349.jpg" },
+                { code: "1349", name: "1300 Series - 1349", image: "new_pdf/1300/1349..jpg" },
+                { code: "1350", name: "1300 Series - 1350", image: "new_pdf/1300/1350.jpg" },
+                { code: "1350", name: "1300 Series - 1350", image: "new_pdf/1300/1350..jpg" },
+                { code: "1351", name: "1300 Series - 1351", image: "new_pdf/1300/1351.jpg" },
+                { code: "1351", name: "1300 Series - 1351", image: "new_pdf/1300/1351..jpg" },
+                { code: "1352", name: "1300 Series - 1352", image: "new_pdf/1300/1352.jpg" },
+                { code: "1352", name: "1300 Series - 1352", image: "new_pdf/1300/1352..jpg" }
+            ],
+            "1400": [
+                { code: "1401", name: "1400 Series - 1401", image: "new_pdf/1400/1401.jpg" },
+                { code: "1401", name: "1400 Series - 1401", image: "new_pdf/1400/1401..jpg" },
+                { code: "1402", name: "1400 Series - 1402", image: "new_pdf/1400/1402.jpg" },
+                { code: "1402", name: "1400 Series - 1402", image: "new_pdf/1400/1402..jpg" },
+                { code: "1403", name: "1400 Series - 1403", image: "new_pdf/1400/1403.jpg" },
+                { code: "1403", name: "1400 Series - 1403", image: "new_pdf/1400/1403..jpg" },
+                { code: "1404", name: "1400 Series - 1404", image: "new_pdf/1400/1404.jpg" },
+                { code: "1404", name: "1400 Series - 1404", image: "new_pdf/1400/1404..jpg" },
+                { code: "1405", name: "1400 Series - 1405", image: "new_pdf/1400/1405.jpg" },
+                { code: "1405", name: "1400 Series - 1405", image: "new_pdf/1400/1405..jpg" },
+                { code: "1406", name: "1400 Series - 1406", image: "new_pdf/1400/1406.jpg" },
+                { code: "1406", name: "1400 Series - 1406", image: "new_pdf/1400/1406..jpg" },
+                { code: "1407", name: "1400 Series - 1407", image: "new_pdf/1400/1407.jpg" },
+                { code: "1407", name: "1400 Series - 1407", image: "new_pdf/1400/1407..jpg" },
+                { code: "1408", name: "1400 Series - 1408", image: "new_pdf/1400/1408.jpg" },
+                { code: "1408", name: "1400 Series - 1408", image: "new_pdf/1400/1408..jpg" },
+                { code: "1409", name: "1400 Series - 1409", image: "new_pdf/1400/1409.jpg" },
+                { code: "1409", name: "1400 Series - 1409", image: "new_pdf/1400/1409..jpg" },
+                { code: "1410", name: "1400 Series - 1410", image: "new_pdf/1400/1410.jpg" },
+                { code: "1410", name: "1400 Series - 1410", image: "new_pdf/1400/1410..jpg" },
+                { code: "1411", name: "1400 Series - 1411", image: "new_pdf/1400/1411.jpg" },
+                { code: "1411", name: "1400 Series - 1411", image: "new_pdf/1400/1411..jpg" },
+                { code: "1412", name: "1400 Series - 1412", image: "new_pdf/1400/1412.jpg" },
+                { code: "1412", name: "1400 Series - 1412", image: "new_pdf/1400/1412..jpg" },
+                { code: "1413", name: "1400 Series - 1413", image: "new_pdf/1400/1413.jpg" },
+                { code: "1413", name: "1400 Series - 1413", image: "new_pdf/1400/1413..jpg" },
+                { code: "1414", name: "1400 Series - 1414", image: "new_pdf/1400/1414.jpg" },
+                { code: "1414", name: "1400 Series - 1414", image: "new_pdf/1400/1414..jpg" },
+                { code: "1415", name: "1400 Series - 1415", image: "new_pdf/1400/1415.jpg" },
+                { code: "1415", name: "1400 Series - 1415", image: "new_pdf/1400/1415..jpg" },
+                { code: "1416", name: "1400 Series - 1416", image: "new_pdf/1400/1416.jpg" },
+                { code: "1416", name: "1400 Series - 1416", image: "new_pdf/1400/1416..jpg" },
+                { code: "1417", name: "1400 Series - 1417", image: "new_pdf/1400/1417.jpg" },
+                { code: "1417", name: "1400 Series - 1417", image: "new_pdf/1400/1417..jpg" },
+                { code: "1418", name: "1400 Series - 1418", image: "new_pdf/1400/1418.jpg" },
+                { code: "1418", name: "1400 Series - 1418", image: "new_pdf/1400/1418..jpg" },
+                { code: "1419", name: "1400 Series - 1419", image: "new_pdf/1400/1419.jpg" },
+                { code: "1419", name: "1400 Series - 1419", image: "new_pdf/1400/1419..jpg" },
+                { code: "1420", name: "1400 Series - 1420", image: "new_pdf/1400/1420.jpg" },
+                { code: "1420", name: "1400 Series - 1420", image: "new_pdf/1400/1420..jpg" },
+                { code: "1421", name: "1400 Series - 1421", image: "new_pdf/1400/1421.jpg" },
+                { code: "1421", name: "1400 Series - 1421", image: "new_pdf/1400/1421..jpg" },
+                { code: "1422", name: "1400 Series - 1422", image: "new_pdf/1400/1422.jpg" },
+                { code: "1422", name: "1400 Series - 1422", image: "new_pdf/1400/1422..jpg" },
+                { code: "1423", name: "1400 Series - 1423", image: "new_pdf/1400/1423.jpg" },
+                { code: "1423", name: "1400 Series - 1423", image: "new_pdf/1400/1423..jpg" },
+                { code: "1424", name: "1400 Series - 1424", image: "new_pdf/1400/1424.jpg" },
+                { code: "1424", name: "1400 Series - 1424", image: "new_pdf/1400/1424..jpg" },
+                { code: "1425", name: "1400 Series - 1425", image: "new_pdf/1400/1425.jpg" },
+                { code: "1425", name: "1400 Series - 1425", image: "new_pdf/1400/1425..jpg" },
+                { code: "1426", name: "1400 Series - 1426", image: "new_pdf/1400/1426.jpg" },
+                { code: "1426", name: "1400 Series - 1426", image: "new_pdf/1400/1426..jpg" },
+                { code: "1427", name: "1400 Series - 1427", image: "new_pdf/1400/1427.jpg" },
+                { code: "1427", name: "1400 Series - 1427", image: "new_pdf/1400/1427..jpg" },
+                { code: "1428", name: "1400 Series - 1428", image: "new_pdf/1400/1428.jpg" },
+                { code: "1428", name: "1400 Series - 1428", image: "new_pdf/1400/1428..jpg" },
+                { code: "1429", name: "1400 Series - 1429", image: "new_pdf/1400/1429.jpg" },
+                { code: "1429", name: "1400 Series - 1429", image: "new_pdf/1400/1429..jpg" },
+                { code: "1430", name: "1400 Series - 1430", image: "new_pdf/1400/1430.jpg" },
+                { code: "1430", name: "1400 Series - 1430", image: "new_pdf/1400/1430..jpg" },
+                { code: "1431", name: "1400 Series - 1431", image: "new_pdf/1400/1431.jpg" },
+                { code: "1431", name: "1400 Series - 1431", image: "new_pdf/1400/1431..jpg" },
+                { code: "1432", name: "1400 Series - 1432", image: "new_pdf/1400/1432.jpg" },
+                { code: "1432", name: "1400 Series - 1432", image: "new_pdf/1400/1432..jpg" },
+                { code: "1433", name: "1400 Series - 1433", image: "new_pdf/1400/1433.jpg" },
+                { code: "1433", name: "1400 Series - 1433", image: "new_pdf/1400/1433..jpg" },
+                { code: "1434", name: "1400 Series - 1434", image: "new_pdf/1400/1434.jpg" },
+                { code: "1434", name: "1400 Series - 1434", image: "new_pdf/1400/1434..jpg" },
+                { code: "1435", name: "1400 Series - 1435", image: "new_pdf/1400/1435.jpg" },
+                { code: "1435", name: "1400 Series - 1435", image: "new_pdf/1400/1435..jpg" },
+                { code: "1436", name: "1400 Series - 1436", image: "new_pdf/1400/1436.jpg" },
+                { code: "1436", name: "1400 Series - 1436", image: "new_pdf/1400/1436..jpg" },
+                { code: "1437", name: "1400 Series - 1437", image: "new_pdf/1400/1437.jpg" },
+                { code: "1437", name: "1400 Series - 1437", image: "new_pdf/1400/1437..jpg" },
+                { code: "1438", name: "1400 Series - 1438", image: "new_pdf/1400/1438.jpg" },
+                { code: "1438", name: "1400 Series - 1438", image: "new_pdf/1400/1438..jpg" },
+                { code: "1439", name: "1400 Series - 1439", image: "new_pdf/1400/1439.jpg" },
+                { code: "1439", name: "1400 Series - 1439", image: "new_pdf/1400/1439..jpg" },
+                { code: "1440", name: "1400 Series - 1440", image: "new_pdf/1400/1440.jpg" },
+                { code: "1440", name: "1400 Series - 1440", image: "new_pdf/1400/1440..jpg" },
+                { code: "1441", name: "1400 Series - 1441", image: "new_pdf/1400/1441.jpg" },
+                { code: "1441", name: "1400 Series - 1441", image: "new_pdf/1400/1441..jpg" },
+                { code: "1442", name: "1400 Series - 1442", image: "new_pdf/1400/1442.jpg" },
+                { code: "1442", name: "1400 Series - 1442", image: "new_pdf/1400/1442..jpg" },
+                { code: "1443", name: "1400 Series - 1443", image: "new_pdf/1400/1443.jpg" },
+                { code: "1443", name: "1400 Series - 1443", image: "new_pdf/1400/1443..jpg" }
+                
+            ],
+            "1500": [
+                { code: "1501", name: "1500 Series - 1501", image: "new_pdf/1500/1501.jpg" },
+                { code: "1501", name: "1500 Series - 1501", image: "new_pdf/1500/1501..jpg" },
+                { code: "1502", name: "1500 Series - 1502", image: "new_pdf/1500/1502..jpg" },
+                { code: "1503", name: "1500 Series - 1503", image: "new_pdf/1500/1503..jpg" },
+                { code: "1505", name: "1500 Series - 1505", image: "new_pdf/1500/1505.jpg" },
+                { code: "1506", name: "1500 Series - 1506", image: "new_pdf/1500/1506.jpg" },
+                { code: "1506", name: "1500 Series - 1506", image: "new_pdf/1500/1506..jpg" },
+                { code: "1507", name: "1500 Series - 1507", image: "new_pdf/1500/1507.jpg" },
+                { code: "1507", name: "1500 Series - 1507", image: "new_pdf/1500/1507..jpg" },
+                { code: "1509", name: "1500 Series - 1509", image: "new_pdf/1500/1509.jpg" },
+                { code: "1510", name: "1500 Series - 1510", image: "new_pdf/1500/1510.jpg" },
+                { code: "1510", name: "1500 Series - 1510", image: "new_pdf/1500/1510..jpg" },
+                { code: "1511", name: "1500 Series - 1511", image: "new_pdf/1500/1511.jpg" },
+                { code: "1511", name: "1500 Series - 1511", image: "new_pdf/1500/1511..jpg" },
+                { code: "1513", name: "1500 Series - 1513", image: "new_pdf/1500/1513.jpg" },
+                { code: "1514", name: "1500 Series - 1514", image: "new_pdf/1500/1514.jpg" },
+                { code: "1514", name: "1500 Series - 1514", image: "new_pdf/1500/1514..jpg" },
+                { code: "1515", name: "1500 Series - 1515", image: "new_pdf/1500/1515.jpg" },
+                { code: "1515", name: "1500 Series - 1515", image: "new_pdf/1500/1515..jpg" },
+                { code: "1516", name: "1500 Series - 1516", image: "new_pdf/1500/1516.jpg" },
+                { code: "1516", name: "1500 Series - 1516", image: "new_pdf/1500/1516..jpg" },
+                { code: "1517", name: "1500 Series - 1517", image: "new_pdf/1500/1517.jpg" },
+                { code: "1517", name: "1500 Series - 1517", image: "new_pdf/1500/1517..jpg" },
+                { code: "1518", name: "1500 Series - 1518", image: "new_pdf/1500/1518.jpg" },
+                { code: "1518", name: "1500 Series - 1518", image: "new_pdf/1500/1518..jpg" },
+                { code: "1519", name: "1500 Series - 1519", image: "new_pdf/1500/1519.jpg" },
+                { code: "1520", name: "1500 Series - 1520", image: "new_pdf/1500/1520.jpg" },
+                { code: "1520", name: "1500 Series - 1520", image: "new_pdf/1500/1520..jpg" },
+                { code: "1522", name: "1500 Series - 1522", image: "new_pdf/1500/1522.jpg" },
+                { code: "1522", name: "1500 Series - 1522", image: "new_pdf/1500/1522..jpg" },
+                { code: "1523", name: "1500 Series - 1523", image: "new_pdf/1500/1523.jpg" },
+                { code: "1523", name: "1500 Series - 1523", image: "new_pdf/1500/1523..jpg" },
+                { code: "1524", name: "1500 Series - 1524", image: "new_pdf/1500/1524.jpg" },
+                { code: "1524", name: "1500 Series - 1524", image: "new_pdf/1500/1524..jpg" },
+                { code: "1525", name: "1500 Series - 1525", image: "new_pdf/1500/1525.jpg" },
+                { code: "1526", name: "1500 Series - 1526", image: "new_pdf/1500/1526.jpg" },
+                { code: "1526", name: "1500 Series - 1526", image: "new_pdf/1500/1526..jpg" },
+                { code: "1527", name: "1500 Series - 1527", image: "new_pdf/1500/1527.jpg" },
+                { code: "1527", name: "1500 Series - 1527", image: "new_pdf/1500/1527..jpg" },
+                { code: "1528", name: "1500 Series - 1528", image: "new_pdf/1500/1528.jpg" },
+                { code: "1528", name: "1500 Series - 1528", image: "new_pdf/1500/1528..jpg" },
+                { code: "1529", name: "1500 Series - 1529", image: "new_pdf/1500/1529.jpg" },
+                { code: "1529", name: "1500 Series - 1529", image: "new_pdf/1500/1529..jpg" },
+                { code: "1530", name: "1500 Series - 1530", image: "new_pdf/1500/1530.jpg" },
+                { code: "1530", name: "1500 Series - 1530", image: "new_pdf/1500/1530..jpg" },
+                { code: "1532", name: "1500 Series - 1532", image: "new_pdf/1500/1532.jpg" },
+                { code: "1532", name: "1500 Series - 1532", image: "new_pdf/1500/1532..jpg" },
+                { code: "1533", name: "1500 Series - 1533", image: "new_pdf/1500/1533.jpg" },
+                { code: "1533", name: "1500 Series - 1533", image: "new_pdf/1500/1533..jpg" },
+                { code: "1534", name: "1500 Series - 1534", image: "new_pdf/1500/1534.jpg" },
+                { code: "1534", name: "1500 Series - 1534", image: "new_pdf/1500/1534..jpg" },
+                { code: "1535", name: "1500 Series - 1535", image: "new_pdf/1500/1535.jpg" },
+                { code: "1535", name: "1500 Series - 1535", image: "new_pdf/1500/1535..jpg" },
+                { code: "1536", name: "1500 Series - 1536", image: "new_pdf/1500/1536.jpg" },
+                { code: "1536", name: "1500 Series - 1536", image: "new_pdf/1500/1536..jpg" },
+                { code: "1538", name: "1500 Series - 1538", image: "new_pdf/1500/1538.jpg" },
+                { code: "1538", name: "1500 Series - 1538", image: "new_pdf/1500/1538..jpg" },
+                { code: "1539", name: "1500 Series - 1539", image: "new_pdf/1500/1539.jpg" },
+                { code: "1539", name: "1500 Series - 1539", image: "new_pdf/1500/1539..jpg" },
+                { code: "1540", name: "1500 Series - 1540", image: "new_pdf/1500/1540.jpg" },
+                { code: "1540", name: "1500 Series - 1540", image: "new_pdf/1500/1540..jpg" },
+                { code: "1541", name: "1500 Series - 1541", image: "new_pdf/1500/1541.jpg" },
+                { code: "1541", name: "1500 Series - 1541", image: "new_pdf/1500/1541..jpg" },
+                { code: "1542", name: "1500 Series - 1542", image: "new_pdf/1500/1542.jpg" },
+                { code: "1542", name: "1500 Series - 1542", image: "new_pdf/1500/1542..jpg" },
+                { code: "1543", name: "1500 Series - 1543", image: "new_pdf/1500/1543.jpg" },
+                { code: "1543", name: "1500 Series - 1543", image: "new_pdf/1500/1543..jpg" },
+                { code: "1544", name: "1500 Series - 1544", image: "new_pdf/1500/1544.jpg" },
+                { code: "1544", name: "1500 Series - 1544", image: "new_pdf/1500/1544..jpg" },
+                { code: "1545", name: "1500 Series - 1545", image: "new_pdf/1500/1545.jpg" },
+                { code: "1545", name: "1500 Series - 1545", image: "new_pdf/1500/1545..jpg" },
+                { code: "1546", name: "1500 Series - 1546", image: "new_pdf/1500/1546.jpg" },
+                { code: "1546", name: "1500 Series - 1546", image: "new_pdf/1500/1546..jpg" },
+                { code: "1548", name: "1500 Series - 1548", image: "new_pdf/1500/1548.jpg" },
+                { code: "1548", name: "1500 Series - 1548", image: "new_pdf/1500/1548..jpg" },
+                { code: "1549", name: "1500 Series - 1549", image: "new_pdf/1500/1549.jpg" },
+                { code: "1549", name: "1500 Series - 1549", image: "new_pdf/1500/1549..jpg" },
+                { code: "1550", name: "1500 Series - 1550", image: "new_pdf/1500/1550.jpg" },
+                { code: "1550", name: "1500 Series - 1550", image: "new_pdf/1500/1550..jpg" },
+                { code: "1552", name: "1500 Series - 1552", image: "new_pdf/1500/1552.jpg" },
+                { code: "1552", name: "1500 Series - 1552", image: "new_pdf/1500/1552..jpg" },
+                { code: "1553", name: "1500 Series - 1553", image: "new_pdf/1500/1553.jpg" },
+                { code: "1553", name: "1500 Series - 1553", image: "new_pdf/1500/1553..jpg" },
+                { code: "1555", name: "1500 Series - 1555", image: "new_pdf/1500/1555.jpg" },
+                { code: "1555", name: "1500 Series - 1555", image: "new_pdf/1500/1555..jpg" },
+                { code: "1556", name: "1500 Series - 1556", image: "new_pdf/1500/1556.jpg" },
+                { code: "1556", name: "1500 Series - 1556", image: "new_pdf/1500/1556..jpg" },
+                { code: "1557", name: "1500 Series - 1557", image: "new_pdf/1500/1557.jpg" },
+                { code: "1557", name: "1500 Series - 1557", image: "new_pdf/1500/1557..jpg" },
+                { code: "1558", name: "1500 Series - 1558", image: "new_pdf/1500/1558.jpg" },
+                { code: "1558", name: "1500 Series - 1558", image: "new_pdf/1500/1558..jpg" },
+                { code: "1560", name: "1500 Series - 1560", image: "new_pdf/1500/1560.jpg" },
+                { code: "1560", name: "1500 Series - 1560", image: "new_pdf/1500/1560..jpg" },
+                { code: "1561", name: "1500 Series - 1561", image: "new_pdf/1500/1561.jpg" },
+                { code: "1561", name: "1500 Series - 1561", image: "new_pdf/1500/1561..jpg" },
+                { code: "1562", name: "1500 Series - 1562", image: "new_pdf/1500/1562.jpg" },
+                { code: "1562", name: "1500 Series - 1562", image: "new_pdf/1500/1562..jpg" },
+                { code: "1563", name: "1500 Series - 1563", image: "new_pdf/1500/1563.jpg" },
+                { code: "1563", name: "1500 Series - 1563", image: "new_pdf/1500/1563..jpg" },
+                { code: "1564", name: "1500 Series - 1564", image: "new_pdf/1500/1564.jpg" },
+                { code: "1564", name: "1500 Series - 1564", image: "new_pdf/1500/1564..jpg" },
+                { code: "1565", name: "1500 Series - 1565", image: "new_pdf/1500/1565.jpg" },
+                { code: "1565", name: "1500 Series - 1565", image: "new_pdf/1500/1565..jpg" },
+                { code: "1566", name: "1500 Series - 1566", image: "new_pdf/1500/1566.jpg" },
+                { code: "1566", name: "1500 Series - 1566", image: "new_pdf/1500/1566..jpg" },
+                { code: "1567", name: "1500 Series - 1567", image: "new_pdf/1500/1567.jpg" },
+                { code: "1567", name: "1500 Series - 1567", image: "new_pdf/1500/1567..jpg" },
+                { code: "1568", name: "1500 Series - 1568", image: "new_pdf/1500/1568.jpg" },
+                { code: "1568", name: "1500 Series - 1568", image: "new_pdf/1500/1568..jpg" },
+                { code: "1570", name: "1500 Series - 1570", image: "new_pdf/1500/1570.jpg" },
+                { code: "1570", name: "1500 Series - 1570", image: "new_pdf/1500/1570..jpg" },
+                { code: "1571", name: "1500 Series - 1571", image: "new_pdf/1500/1571.jpg" },
+                { code: "1571", name: "1500 Series - 1571", image: "new_pdf/1500/1571..jpg" },
+                { code: "1572", name: "1500 Series - 1572", image: "new_pdf/1500/1572.jpg" },
+                { code: "1572", name: "1500 Series - 1572", image: "new_pdf/1500/1572..jpg" },
+                { code: "1573", name: "1500 Series - 1573", image: "new_pdf/1500/1573.jpg" },
+                { code: "1573", name: "1500 Series - 1573", image: "new_pdf/1500/1573..jpg" },
+                { code: "1574", name: "1500 Series - 1574", image: "new_pdf/1500/1574.jpg" },
+                { code: "1574", name: "1500 Series - 1574", image: "new_pdf/1500/1574..jpg" },
+                { code: "1575", name: "1500 Series - 1575", image: "new_pdf/1500/1575.jpg" },
+                { code: "1575", name: "1500 Series - 1575", image: "new_pdf/1500/1575..jpg" },
+                { code: "1576", name: "1500 Series - 1576", image: "new_pdf/1500/1576.jpg" },
+                { code: "1576", name: "1500 Series - 1576", image: "new_pdf/1500/1576..jpg" },
+                { code: "1577", name: "1500 Series - 1577", image: "new_pdf/1500/1577.jpg" },
+                { code: "1577", name: "1500 Series - 1577", image: "new_pdf/1500/1577..jpg" },
+                { code: "1578", name: "1500 Series - 1578", image: "new_pdf/1500/1578.jpg" },
+                { code: "1578", name: "1500 Series - 1578", image: "new_pdf/1500/1578..jpg" },
+                { code: "1580", name: "1500 Series - 1580", image: "new_pdf/1500/1580.jpg" },
+                { code: "1580", name: "1500 Series - 1580", image: "new_pdf/1500/1580..jpg" },
+                { code: "1581", name: "1500 Series - 1581", image: "new_pdf/1500/1581.jpg" },
+                { code: "1581", name: "1500 Series - 1581", image: "new_pdf/1500/1581..jpg" },
+                { code: "1582", name: "1500 Series - 1582", image: "new_pdf/1500/1582.jpg" },
+                { code: "1582", name: "1500 Series - 1582", image: "new_pdf/1500/1582..jpg" },
+                { code: "1583", name: "1500 Series - 1583", image: "new_pdf/1500/1583.jpg" },
+                { code: "1583", name: "1500 Series - 1583", image: "new_pdf/1500/1583..jpg" },
+                { code: "1584", name: "1500 Series - 1584", image: "new_pdf/1500/1584.jpg" },
+                { code: "1584", name: "1500 Series - 1584", image: "new_pdf/1500/1584..jpg" },
+                { code: "1585", name: "1500 Series - 1585", image: "new_pdf/1500/1585.jpg" },
+                { code: "1585", name: "1500 Series - 1585", image: "new_pdf/1500/1585..jpg" },
+                { code: "1586", name: "1500 Series - 1586", image: "new_pdf/1500/1586.jpg" },
+                { code: "1586", name: "1500 Series - 1586", image: "new_pdf/1500/1586..jpg" },
+                { code: "1587", name: "1500 Series - 1587", image: "new_pdf/1500/1587.jpg" },
+                { code: "1587", name: "1500 Series - 1587", image: "new_pdf/1500/1587..jpg" }
+            ],
+            "shagun_envelop": [
+                { code: "2701", name: "Shagun Envelop Series - 2701", image: "new_pdf/Shaugn/2701.jpeg" },
+                { code: "2702", name: "Shagun Envelop Series - 2702", image: "new_pdf/Shaugn/2702.jpeg" },
+                { code: "2703", name: "Shagun Envelop Series - 2703", image: "new_pdf/Shaugn/2703.jpeg" },
+                { code: "2704", name: "Shagun Envelop Series - 2704", image: "new_pdf/Shaugn/2704.jpeg" },
+                { code: "2705", name: "Shagun Envelop Series - 2705", image: "new_pdf/Shaugn/2705.jpeg" },
+                { code: "2706", name: "Shagun Envelop Series - 2706", image: "new_pdf/Shaugn/2706.jpeg" },
+                { code: "2707", name: "Shagun Envelop Series - 2707", image: "new_pdf/Shaugn/2707.jpeg" },
+                { code: "2708", name: "Shagun Envelop Series - 2708", image: "new_pdf/Shaugn/2708.jpeg" },
+                { code: "2710", name: "Shagun Envelop Series - 2710", image: "new_pdf/Shaugn/2710.jpeg" },
+                { code: "2712", name: "Shagun Envelop Series - 2712", image: "new_pdf/Shaugn/2712.jpeg" },
+                { code: "2713", name: "Shagun Envelop Series - 2713", image: "new_pdf/Shaugn/2713.jpeg" },
+                { code: "2714", name: "Shagun Envelop Series - 2714", image: "new_pdf/Shaugn/2714.jpeg" },
+                { code: "2715", name: "Shagun Envelop Series - 2715", image: "new_pdf/Shaugn/2715.jpeg" },
+                { code: "2716", name: "Shagun Envelop Series - 2716", image: "new_pdf/Shaugn/2716.jpeg" },
+                { code: "2717", name: "Shagun Envelop Series - 2717", image: "new_pdf/Shaugn/2717.jpeg" },
+                { code: "2718", name: "Shagun Envelop Series - 2718", image: "new_pdf/Shaugn/2718.jpeg" },
+                { code: "2719", name: "Shagun Envelop Series - 2719", image: "new_pdf/Shaugn/2719.jpeg" },
+                { code: "2720", name: "Shagun Envelop Series - 2720", image: "new_pdf/Shaugn/2720.jpeg" },
+                { code: "2721", name: "Shagun Envelop Series - 2721", image: "new_pdf/Shaugn/2721.jpeg" },
+                { code: "2722", name: "Shagun Envelop Series - 2722", image: "new_pdf/Shaugn/2722.jpeg" },
+                { code: "2723", name: "Shagun Envelop Series - 2723", image: "new_pdf/Shaugn/2723.jpeg" },
+                { code: "2724", name: "Shagun Envelop Series - 2724", image: "new_pdf/Shaugn/2724.jpeg" },
+                { code: "2725", name: "Shagun Envelop Series - 2725", image: "new_pdf/Shaugn/2725.jpeg" },
+                { code: "2729", name: "Shagun Envelop Series - 2729", image: "new_pdf/Shaugn/2729.jpeg" },
+                { code: "2731", name: "Shagun Envelop Series - 2731", image: "new_pdf/Shaugn/2731.jpeg" },
+                { code: "2737", name: "Shagun Envelop Series - 2737", image: "new_pdf/Shaugn/2737.jpeg" },
+                { code: "2738", name: "Shagun Envelop Series - 2738", image: "new_pdf/Shaugn/2738.jpeg" },
+                { code: "2739", name: "Shagun Envelop Series - 2739", image: "new_pdf/Shaugn/2739.jpeg" },
+                { code: "2741", name: "Shagun Envelop Series - 2741", image: "new_pdf/Shaugn/2741.jpeg" },
+                { code: "2741", name: "Shagun Envelop Series - 2741", image: "new_pdf/Shaugn/2741 ..jpeg" },
+                { code: "2742", name: "Shagun Envelop Series - 2742", image: "new_pdf/Shaugn/2742.jpeg" },
+                { code: "2742", name: "Shagun Envelop Series - 2742", image: "new_pdf/Shaugn/2742 ..jpeg" },
+                { code: "2747", name: "Shagun Envelop Series - 2747", image: "new_pdf/Shaugn/2747.jpeg" },
+                { code: "2749", name: "Shagun Envelop Series - 2749", image: "new_pdf/Shaugn/2749.jpeg" },
+                { code: "2757", name: "Shagun Envelop Series - 2757", image: "new_pdf/Shaugn/2757.jpeg" },
+                { code: "2758", name: "Shagun Envelop Series - 2758", image: "new_pdf/Shaugn/2758.jpeg" },
+                { code: "2761", name: "Shagun Envelop Series - 2761", image: "new_pdf/Shaugn/2761.jpeg" },
+                { code: "2762", name: "Shagun Envelop Series - 2762", image: "new_pdf/Shaugn/2762.jpeg" },
+                { code: "2764", name: "Shagun Envelop Series - 2764", image: "new_pdf/Shaugn/2764.jpeg" },
+                { code: "2766", name: "Shagun Envelop Series - 2766", image: "new_pdf/Shaugn/2766.jpeg" },
+                { code: "2771", name: "Shagun Envelop Series - 2771", image: "new_pdf/Shaugn/2771.jpeg" },
+                { code: "2772", name: "Shagun Envelop Series - 2772", image: "new_pdf/Shaugn/2772.jpeg" },
+                { code: "2780", name: "Shagun Envelop Series - 2780", image: "new_pdf/Shaugn/2780.jpeg" },
+                { code: "2782", name: "Shagun Envelop Series - 2782", image: "new_pdf/Shaugn/2782.jpeg" },
+                { code: "2783", name: "Shagun Envelop Series - 2783", image: "new_pdf/Shaugn/2783.jpeg" },
+                { code: "2788", name: "Shagun Envelop Series - 2788", image: "new_pdf/Shaugn/2788.jpeg" },
+                { code: "2791", name: "Shagun Envelop Series - 2791", image: "new_pdf/Shaugn/2791.jpeg" }
+            ],
+            "1700": [
+                { code: "1700", name: "1700 Series - 1700", image: "new_pdf/1700/1700.jpeg" },
+                { code: "1706", name: "1700 Series - 1706", image: "new_pdf/1700/1706.jpeg" },
+                { code: "1706", name: "1700 Series - 1706", image: "new_pdf/1700/1706 ..jpeg" },
+                { code: "1707", name: "1700 Series - 1707", image: "new_pdf/1700/1707.jpeg" },
+                { code: "1707", name: "1700 Series - 1707", image: "new_pdf/1700/1707 ..jpeg" },
+                { code: "1709", name: "1700 Series - 1709", image: "new_pdf/1700/1709.jpeg" },
+                { code: "1709", name: "1700 Series - 1709", image: "new_pdf/1700/1709 ..jpeg" },
+                { code: "1721", name: "1700 Series - 1721", image: "new_pdf/1700/1721.jpeg" },
+                { code: "1728", name: "1700 Series - 1728", image: "new_pdf/1700/1728.jpeg" },
+                { code: "1737", name: "1700 Series - 1737", image: "new_pdf/1700/1737 ..jpeg" },
+                { code: "1737", name: "1700 Series - 1737", image: "new_pdf/1700/1737.jpeg" },
+                { code: "1738", name: "1700 Series - 1738", image: "new_pdf/1700/1738 ..jpeg" },
+                { code: "1738", name: "1700 Series - 1738", image: "new_pdf/1700/1738.jpeg" },
+                { code: "1741", name: "1700 Series - 1741", image: "new_pdf/1700/1741 ..jpeg" },
+                { code: "1741", name: "1700 Series - 1741", image: "new_pdf/1700/1741.jpeg" },
+                { code: "1742", name: "1700 Series - 1742", image: "new_pdf/1700/1742 ..jpeg" },
+                { code: "1742", name: "1700 Series - 1742", image: "new_pdf/1700/1742.jpeg" },
+                { code: "1761", name: "1700 Series - 1761", image: "new_pdf/1700/1761 ..jpeg" },
+                { code: "1780", name: "1700 Series - 1780", image: "new_pdf/1700/1780 ..jpeg" },
+                { code: "1780", name: "1700 Series - 1780", image: "new_pdf/1700/1780.jpeg"}
+            ]
+        };
+
+
+
+        // Category titles mapping
+        const categoryTitles = {
+            "1100": "1100 Series Collection",
+            "1200": "1200 Series Collection",
+            "1300": "1300 Series Collection",
+            "1400": "1400 Series Collection",
+            "1500": "1500 Series Collection",
+            "shagun_envelop": "Shagun Envelop Series Collection",
+            "1700": "1700 Series Collection"
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const mainNav = document.getElementById('main-nav');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+                // Toggle between hamburger and close icon
+                const icon = this.querySelector('i');
+                if (icon.classList.contains('fa-bars')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+            
+            // Collection Modal functionality
+            const collectionModal = document.getElementById('collectionModal');
+            const modalClose = document.getElementById('modalClose');
+            const modalTitle = document.getElementById('modalTitle');
+            const productsGrid = document.getElementById('productsGrid');
+            const categoryCards = document.querySelectorAll('.category-card');
+            
+            categoryCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const category = this.getAttribute('data-category');
+                    showCollectionModal(category);
+                });
+            });
+            
+            function showCollectionModal(category) {
+                // Set modal title
+                modalTitle.textContent = categoryTitles[category];
+                
+                // Clear previous products
+                productsGrid.innerHTML = '';
+                
+                // Add products to modal
+                productData[category].forEach(product => {
+                    const productCard = document.createElement('div');
+                    productCard.className = 'product-card';
+                    productCard.innerHTML = `
+                        <div class="product-img" style="background-image: url('${product.image}')" data-fullsize="${product.image}"></div>
+                        <div class="product-content">
+                            <h4 class="product-title">${product.name}</h4>
+                            <p class="product-code">${product.code}</p>
+                            <div class="download-options">
+                                <button class="download-btn-jpg" data-image="${product.image}" data-format="jpg">JPG</button>
+                                <button class="download-btn-png" data-image="${product.image}" data-format="png">PNG</button>
+                                <button class="download-btn" data-image="${product.image}" data-format="pdf">PDF</button>
+                            </div>
+                        </div>
+                    `;
+                    productsGrid.appendChild(productCard);
+                });
+                
+                // Show the modal
+                collectionModal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+                
+                // Add event listeners to product images for fullscreen view
+                const productImages = document.querySelectorAll('.product-img');
+                productImages.forEach(image => {
+                    image.addEventListener('click', function() {
+                        const fullSizeImage = this.getAttribute('data-fullsize');
+                        showProductModal(fullSizeImage);
+                    });
+                });
+                
+                // Add event listeners to download buttons
+             const downloadButtons = productsGrid.querySelectorAll(
+                    '.download-btn, .download-btn-jpg, .download-btn-png'
+                );
+
+                downloadButtons.forEach(button => {
+                    button.replaceWith(button.cloneNode(true)); // remove old listeners
+                });
+
+                productsGrid.querySelectorAll(
+                    '.download-btn, .download-btn-jpg, .download-btn-png'
+                ).forEach(button => {
+                    button.addEventListener('click', function (e) {
+                        e.stopPropagation();
+                        const imageUrl = this.getAttribute('data-image');
+                        const format = this.getAttribute('data-format');
+                        downloadImage(imageUrl, format);
+                    });
+                });
+            }
+            
+            modalClose.addEventListener('click', function() {
+                collectionModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+            
+            window.addEventListener('click', function(e) {
+                if (e.target === collectionModal) {
+                    collectionModal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+            
+            // Product Modal with Zoom functionality
+            const productModal = document.getElementById('productModal');
+            const productModalClose = document.getElementById('productModalClose');
+            const productModalImage = document.getElementById('productModalImage');
+            const zoomInBtn = document.getElementById('zoomIn');
+            const zoomOutBtn = document.getElementById('zoomOut');
+            const zoomResetBtn = document.getElementById('zoomReset');
+            
+            let currentScale = 1;
+            const minScale = 1;
+            const maxScale = 5;
+            const scaleStep = 0.5;
+            
+            function showProductModal(imageUrl) {
+                productModalImage.src = imageUrl;
+                productModal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+                resetZoom();
+            }
+            
+            function resetZoom() {
+                currentScale = 1;
+                productModalImage.style.transform = `scale(${currentScale})`;
+                productModalImage.classList.remove('zoomed');
+            }
+            
+            function zoomIn() {
+                if (currentScale < maxScale) {
+                    currentScale += scaleStep;
+                    productModalImage.style.transform = `scale(${currentScale})`;
+                    if (currentScale > 1) {
+                        productModalImage.classList.add('zoomed');
+                    }
+                }
+            }
+            
+            function zoomOut() {
+                if (currentScale > minScale) {
+                    currentScale -= scaleStep;
+                    productModalImage.style.transform = `scale(${currentScale})`;
+                    if (currentScale <= 1) {
+                        productModalImage.classList.remove('zoomed');
+                    }
+                }
+            }
+            
+            productModalClose.addEventListener('click', function() {
+                productModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                resetZoom();
+            });
+            
+            window.addEventListener('click', function(e) {
+                if (e.target === productModal) {
+                    productModal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                    resetZoom();
+                }
+            });
+            
+            // Zoom controls
+            zoomInBtn.addEventListener('click', zoomIn);
+            zoomOutBtn.addEventListener('click', zoomOut);
+            zoomResetBtn.addEventListener('click', resetZoom);
+            
+            // Mouse wheel zoom
+            productModalImage.addEventListener('wheel', function(e) {
+                e.preventDefault();
+                if (e.deltaY < 0) {
+                    zoomIn();
+                } else {
+                    zoomOut();
+                }
+            });
+            
+            // Contact Modal functionality
+            const contactModal = document.getElementById('contactModal');
+            const contactModalClose = document.getElementById('contactModalClose');
+            const contactLink = document.getElementById('contactLink');
+            
+            contactLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                contactModal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            });
+            
+            contactModalClose.addEventListener('click', function() {
+                contactModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+            
+            window.addEventListener('click', function(e) {
+                if (e.target === contactModal) {
+                    contactModal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+            
+            // Download functionality
+            async function downloadImage(imageUrl, format) {
+        const originalName = imageUrl.split('/').pop();
+        const safeName = sanitizeFileName(originalName, format);
+
+        if (format === 'pdf') {
+            try {
+                const { jsPDF } = window.jspdf;
+                const pdf = new jsPDF();
+
+                const imgData = await loadImageAsDataURL(imageUrl);
+                const img = await loadImage(imageUrl);
+
+                // Scale image to fit PDF page
+                const pageWidth = pdf.internal.pageSize.getWidth();
+                const pageHeight = pdf.internal.pageSize.getHeight();
+                const ratio = Math.min(pageWidth / img.width, pageHeight / img.height);
+                const imgWidth = img.width * ratio;
+                const imgHeight = img.height * ratio;
+                const x = (pageWidth - imgWidth) / 2;
+                const y = (pageHeight - imgHeight) / 2;
+
+                pdf.addImage(imgData, "JPEG", x, y, imgWidth, imgHeight);
+                pdf.save(safeName.replace(/\.(jpg|jpeg|png)$/i, '.pdf'));
+
+            } catch (error) {
+                console.error("Error generating PDF:", error);
+                alert("Failed to create PDF. Downloading JPG instead.");
+                convertAndDownload(imageUrl, "image/jpeg", sanitizeFileName(originalName, "jpg"));
+            }
+        } else if (format === 'png') {
+            await convertAndDownload(imageUrl, "image/png", safeName);
+        } else if (format === 'jpg' || format === 'jpeg') {
+            await convertAndDownload(imageUrl, "image/jpeg", safeName);
+        }
+    }
+
+    // Convert image & trigger download
+    async function convertAndDownload(imageUrl, mimeType, fileName) {
+        const img = await loadImage(imageUrl);
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = img.width;
+        canvas.height = img.height;
+        ctx.drawImage(img, 0, 0);
+
+        const dataUrl = canvas.toDataURL(mimeType);
+
+        const a = document.createElement('a');
+        a.href = dataUrl;
+        a.download = fileName;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+
+        alert(`Downloading product in ${fileName.split('.').pop().toUpperCase()} format`);
+    }
+
+    // Sanitize file name
+    function sanitizeFileName(fileName, newExt) {
+        let base = fileName.split('?')[0];          // remove query params
+        base = base.replace(/\.+/g, '.');           // collapse multiple dots
+        base = base.replace(/\.(jpg|jpeg|png)$/i, ''); // strip old extension
+        base = base.replace(/[^a-zA-Z0-9_-]/g, ''); // keep only safe chars
+        return `${base}.${newExt}`;
+    }
+
+    // Load image element
+    function loadImage(url) {
+        return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.crossOrigin = "anonymous";
+            img.onload = () => resolve(img);
+            img.onerror = reject;
+            img.src = url;
+        });
+    }
+
+    // Load image as DataURL (for PDF)
+    function loadImageAsDataURL(url) {
+        return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.crossOrigin = "anonymous";
+            img.onload = () => {
+                const canvas = document.createElement("canvas");
+                canvas.width = img.width;
+                canvas.height = img.height;
+                const ctx = canvas.getContext("2d");
+                ctx.drawImage(img, 0, 0);
+                resolve(canvas.toDataURL("image/jpeg"));
+            };
+            img.onerror = reject;
+            img.src = url;
+        });
+    }  // Search functionality
+            const searchBar = document.querySelector('.search-bar');
+            const searchBtn = document.querySelector('.search-btn');
+            
+            function searchProduct() {
+                const searchTerm = searchBar.value.trim().toUpperCase();
+                if (!searchTerm) return;
+                
+                // Search through all products
+                let foundProduct = null;
+                let foundCategory = null;
+                
+                for (const category in productData) {
+                    const product = productData[category].find(p => p.code.toUpperCase() === searchTerm);
+                    if (product) {
+                        foundProduct = product;
+                        foundCategory = category;
+                        break;
+                    }
+                }
+                
+                if (foundProduct) {
+                    // Show the collection modal with the found product
+                    showCollectionModal(foundCategory);
+                    
+                    // Scroll to the product in the modal
+                    setTimeout(() => {
+                        const productElement = Array.from(document.querySelectorAll('.product-code'))
+                            .find(el => el.textContent.toUpperCase() === searchTerm)
+                            .closest('.product-card');
+                        
+                        if (productElement) {
+                            productElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            productElement.style.boxShadow = '0 0 0 3px var(--secondary-color)';
+                            setTimeout(() => {
+                                productElement.style.boxShadow = '';
+                            }, 2000);
+                        }
+                    }, 500);
+                } else {
+                    alert('Product code not found. Please check the code and try again.');
+                }
+            }
+            
+            searchBtn.addEventListener('click', searchProduct);
+            searchBar.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    searchProduct();
+                }
+            });
+            
+            // Form submission
+            const contactForm = document.getElementById('contactForm');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message! We will get back to you soon.');
+                contactForm.reset();
+                contactModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    // Close mobile menu if open
+                    if (mainNav.classList.contains('active')) {
+                        mainNav.classList.remove('active');
+                        mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+                        mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+                    }
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+console.log(JSON.stringify(productData));
