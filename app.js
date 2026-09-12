@@ -39,6 +39,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalTags = document.getElementById('modalTags');
     const whatsappBtn = document.getElementById('whatsappBtn');
     const downloadPdfBtn = document.getElementById('downloadPdfBtn');
+    
+    // Mobile Filter
+    const mobileFilterBtn = document.getElementById('mobileFilterBtn');
+    const exploreCategories = document.querySelector('.explore-categories');
+    
+    // Create overlay for mobile filter
+    const mobileFilterOverlay = document.createElement('div');
+    mobileFilterOverlay.className = 'mobile-filter-overlay';
+    document.body.appendChild(mobileFilterOverlay);
 
     if (typeof products === 'undefined') {
         console.error('Products data not loaded');
@@ -235,7 +244,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         document.getElementById('explore').scrollIntoView({ behavior: 'smooth' });
+        
+        // Close mobile filter if open
+        exploreCategories.classList.remove('active');
+        mobileFilterOverlay.classList.remove('active');
+        document.body.style.overflow = '';
     }
+
+    // Mobile filter toggle
+    if (mobileFilterBtn) {
+        mobileFilterBtn.addEventListener('click', () => {
+            exploreCategories.classList.add('active');
+            mobileFilterOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+
+    mobileFilterOverlay.addEventListener('click', () => {
+        exploreCategories.classList.remove('active');
+        mobileFilterOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    });
 
     function renderNextBatch() {
         const batch = currentFilteredProducts.slice(displayedCount, displayedCount + itemsPerPage);
@@ -244,13 +273,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const card = document.createElement('div');
             card.className = 'product-card';
             card.onclick = () => openModal(product);
+            
+            const formatText = (product.formats && product.formats.length) ? capitalize(product.formats[0]) : 'Premium Invitation';
+            const priceText = product.price > 0 ? ` • ₹${product.price}` : '';
 
             card.innerHTML = `
                 <div class="product-image-container">
                     <img src="${product.image}" alt="${product.code}" class="product-image" loading="lazy">
                 </div>
                 <div class="product-info">
-                    <div class="product-meta">${product.formats[0] || 'Card'} • ₹${product.price}</div>
+                    <div class="product-meta">${formatText}${priceText}</div>
                     <h3 class="product-title">${product.name}</h3>
                 </div>
             `;
@@ -430,22 +462,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function openModal(product) {
         modalImg.src = product.image;
-        modalSeries.textContent = product.id;
+        modalSeries.textContent = product.group ? `Series ${product.group}` : product.id;
         modalTitle.textContent = product.name;
-        modalPrice.textContent = `₹${product.price}`;
+        modalPrice.textContent = product.price > 0 ? `₹${product.price}` : 'Price on Request';
         
-        modalFormat.textContent = capitalize(product.formats[0] || 'Standard');
-        modalColor.textContent = product.colours.map(capitalize).join(', ');
-        modalStyle.textContent = product.styles.map(capitalize).join(', ');
-        modalBox.textContent = capitalize(product.boxTypes[0] || 'Standard');
+        // Hide missing specs dynamically
+        const formatContainer = modalFormat.parentElement;
+        if (product.formats && product.formats.length) {
+            modalFormat.textContent = capitalize(product.formats[0]);
+            formatContainer.style.display = 'flex';
+        } else {
+            formatContainer.style.display = 'none';
+        }
+
+        const colorContainer = modalColor.parentElement;
+        if (product.colours && product.colours.length) {
+            modalColor.textContent = product.colours.map(capitalize).join(', ');
+            colorContainer.style.display = 'flex';
+        } else {
+            colorContainer.style.display = 'none';
+        }
+
+        const styleContainer = modalStyle.parentElement;
+        if (product.styles && product.styles.length) {
+            modalStyle.textContent = product.styles.map(capitalize).join(', ');
+            styleContainer.style.display = 'flex';
+        } else {
+            styleContainer.style.display = 'none';
+        }
+
+        const boxContainer = modalBox.parentElement;
+        if (product.boxTypes && product.boxTypes.length) {
+            modalBox.textContent = capitalize(product.boxTypes[0]);
+            boxContainer.style.display = 'flex';
+        } else {
+            boxContainer.style.display = 'none';
+        }
 
         // Tags
         modalTags.innerHTML = '';
-        product.tags.forEach(tag => {
-            const span = document.createElement('span');
-            span.textContent = tag;
-            modalTags.appendChild(span);
-        });
+        if (product.tags) {
+            product.tags.forEach(tag => {
+                const span = document.createElement('span');
+                span.textContent = tag;
+                modalTags.appendChild(span);
+            });
+        }
 
         // Pre-fill WhatsApp message
         const message = encodeURIComponent(`Hi BhatiaCards, I'm interested in card ${product.id} (${product.name}).`);
