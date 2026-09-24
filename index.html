@@ -3,273 +3,3226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BhatiaCards - Luxury Wedding Invitations</title>
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
+    <title>BhatiaCards - Premium Printing Solutions | Product Catalog 2027</title>
+    <meta name="description" content="BhatiaCards - Premium printing solutions since 1990. Browse our complete 2027 product catalog with 304+ designs across all series.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #e74c3c;
+            --accent: #3498db;
+            --bg: #f5f0e8;
+            --card-bg: #fffdf8;
+            --border: #e8e0d0;
+            --text: #3d3529;
+            --text-light: #a89a84;
+            --brown: #8b7355;
+            --brown-dark: #6d5a42;
+            --brown-deeper: #5c4a32;
+            --transition: all 0.3s ease;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; height: auto; display: block; }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 20px;
+            position: relative;
+        }
+
+        .logo {
+            display: block;
+            z-index: 1001;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.02);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 15px;
+        }
+
+        nav a {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--primary);
+            padding: 8px 18px;
+            border-radius: 24px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover { 
+            background: var(--secondary); 
+            color: white;
+            box-shadow: 0 4px 12px rgba(231, 76, 60, 0.25);
+        }
+
+        .search-container {
+            position: relative;
+            margin-left: 20px;
+        }
+
+        .search-bar {
+            padding: 10px 42px 10px 16px;
+            border: 1.5px solid var(--border);
+            border-radius: 8px;
+            background: #faf6ef;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            color: var(--text);
+            outline: none;
+            width: 280px;
+            transition: border-color 0.2s;
+        }
+
+        .search-bar::placeholder { color: var(--text-light); }
+        .search-bar:focus { border-color: var(--brown); }
+
+        .search-btn {
+            position: absolute;
+            right: 4px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 34px;
+            height: 34px;
+            border: none;
+            border-radius: 6px;
+            background: var(--brown);
+            color: #fff;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+
+        .search-btn:hover { background: var(--brown-dark); }
+
+        .header-stats {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            white-space: nowrap;
+            margin-left: 16px;
+        }
+
+        .header-stats strong { color: var(--brown-dark); }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--primary);
+            z-index: 1001;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            height: 70vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                        url('https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background: var(--secondary);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .btn:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        /* ===== FILTER BAR ===== */
+        .filter-bar {
+            background: var(--card-bg);
+            border-bottom: 1px solid var(--border);
+            padding: 14px 0;
+            position: sticky;
+            top: 58px;
+            z-index: 99;
+        }
+
+        .filter-inner {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .filter-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--brown);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .filter-btn {
+            padding: 7px 18px;
+            border: 1.5px solid var(--border);
+            border-radius: 20px;
+            background: transparent;
+            color: var(--brown-dark);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover { background: #f0e8d8; }
+
+        .filter-btn.active {
+            background: var(--brown);
+            color: #fff;
+            border-color: var(--brown);
+        }
+
+        .results-count {
+            margin-left: auto;
+            font-size: 0.82rem;
+            color: var(--text-light);
+        }
+
+        .results-count strong { color: var(--brown-dark); }
+
+        /* ===== PRODUCT GRID ===== */
+        .products-section {
+            padding: 28px 0 60px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 18px;
+        }
+
+        .product-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(93,74,50,0.1);
+        }
+
+        .product-card.highlight {
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 2px var(--secondary);
+        }
+
+        .card-img {
+            position: relative;
+            height: 190px;
+            background: #f0e8d8;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover .card-img img {
+            transform: scale(1.04);
+        }
+
+        .flip-btn {
+            position: absolute;
+            bottom: 6px;
+            right: 6px;
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            background: rgba(255,253,248,0.9);
+            border: 1px solid var(--border);
+            color: var(--brown-dark);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            transition: background 0.2s;
+        }
+
+        .flip-btn:hover {
+            background: var(--brown);
+            color: #fff;
+            border-color: var(--brown);
+        }
+
+        .card-body { padding: 12px; }
+
+        .card-code {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .card-series {
+            font-size: 0.72rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+
+        .card-downloads {
+            display: flex;
+            gap: 5px;
+        }
+
+        .dl-btn {
+            flex: 1;
+            padding: 6px 0;
+            border: 1px solid var(--border);
+            border-radius: 5px;
+            background: transparent;
+            color: var(--brown);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-transform: uppercase;
+        }
+
+        .dl-btn:hover {
+            background: var(--brown);
+            color: #fff;
+            border-color: var(--brown);
+        }
+
+        /* ===== IMAGE MODAL ===== */
+        .img-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(30,25,18,0.92);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .img-modal.open { display: flex; }
+
+        .img-modal img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 6px;
+            transition: transform 0.3s;
+        }
+
+        .img-modal img.zoomed { cursor: grab; }
+        .img-modal img.zoomed:active { cursor: grabbing; }
+
+        .modal-code {
+            position: absolute;
+            top: 18px;
+            left: 24px;
+            padding: 8px 16px;
+            background: rgba(255,253,248,0.95);
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--text);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .modal-close-btn {
+            position: absolute;
+            top: 18px;
+            right: 24px;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            background: rgba(255,253,248,0.9);
+            border: none;
+            color: var(--text);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+
+        .modal-close-btn:hover {
+            background: var(--secondary);
+            color: #fff;
+        }
+
+        .modal-zoom {
+            position: absolute;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 6px;
+            padding: 6px;
+            background: rgba(255,253,248,0.9);
+            border-radius: 10px;
+        }
+
+        .modal-zoom button {
+            width: 36px;
+            height: 36px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--brown-dark);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .modal-zoom button:hover {
+            background: var(--brown);
+            color: #fff;
+            border-color: var(--brown);
+        }
+
+        /* ===== NO RESULTS ===== */
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-light);
+        }
+
+        .no-results i {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            opacity: 0.4;
+        }
+
+        /* ===== BACK TO TOP ===== */
+        .to-top {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            background: var(--brown);
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            box-shadow: 0 4px 12px rgba(93,74,50,0.25);
+            z-index: 90;
+            transition: transform 0.2s;
+        }
+
+        .to-top:hover { transform: translateY(-2px); }
+        .to-top.show { display: flex; }
+
+        /* ===== CONTACT MODAL ===== */
+        .contact-modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 1200;
+            overflow: auto;
+            padding: 20px;
+        }
+
+        .contact-modal-content {
+            background: white;
+            border-radius: 8px;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 40px;
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .contact-modal-close {
+            position: absolute;
+            top: 15px; right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--primary);
+            background: none;
+            border: none;
+            z-index: 10;
+        }
+
+        .contact-modal-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--primary);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info h3, .contact-form h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .contact-details { margin-bottom: 30px; }
+
+        .contact-details p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            width: 40px; height: 40px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        .form-group { margin-bottom: 20px; }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 2px rgba(52,152,219,0.2);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* ===== FOOTER ===== */
+        .company-history {
+            background: var(--primary);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .history-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .history-content h2 {
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .history-content p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .founders {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .founder {
+            text-align: center;
+            max-width: 250px;
+        }
+
+        .founder-img {
+            width: 120px; height: 120px;
+            border-radius: 50%;
+            background: #ddd;
+            margin: 0 auto 15px;
+            overflow: hidden;
+        }
+
+        .founder h4 {
+            color: var(--secondary);
+            margin-bottom: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .hero h1 { font-size: 2.8rem; }
+            .nav-links { gap: 20px; }
+            .search-bar { width: 200px; }
+            .contact-container { grid-template-columns: 1fr; gap: 30px; }
+        }
+
+        @media (max-width: 768px) {
+            .header-container { flex-wrap: wrap; }
+            .mobile-menu-btn { display: block; }
+
+            nav {
+                position: fixed;
+                top: 0; right: -300px;
+                width: 300px; height: 100vh;
+                background: white;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+                transition: right 0.3s ease;
+                z-index: 1000;
+                flex-direction: column;
+                padding: 80px 20px 20px;
+            }
+
+            nav.active { right: 0; }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 20px;
+                width: 100%;
+            }
+
+            .search-container {
+                width: 100%;
+                margin: 20px 0 0;
+            }
+
+            .search-bar { width: 100%; }
+
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1rem; }
+
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+                gap: 12px;
+            }
+
+            .card-img { height: 150px; }
+
+            .filter-bar { top: 54px; }
+
+            .header-stats { display: none; }
+
+            .contact-modal-content { padding: 30px 20px; }
+        }
+
+        @media (max-width: 480px) {
+            .hero { height: 50vh; }
+            .hero h1 { font-size: 1.8rem; }
+
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            .card-img { height: 130px; }
+            .card-code { font-size: 1rem; }
+
+            .founders { flex-direction: column; align-items: center; }
+            .logo { font-size: 1.5rem; }
+        }
+    </style>
 </head>
 <body>
+      <!-- Header -->
+      <header>
+          <div class="header-container container">
+              <a href="#" class="logo">
+                  <img src="images/Logo Bhatia New.png" alt="Bhatia Cards & Boxes" style="height: 65px; width: auto; display: block; object-fit: contain;">
+              </a>
+  
+              <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
 
-    <!-- Header -->
-    <header class="header">
-        <a href="#" class="logo">Bhatia<span>Cards</span></a>
-        
-        <nav class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#find-card">Find Your Card</a>
-            <a href="#explore">Collection</a>
-            <a href="#heritage">Heritage</a>
-            <a href="#contact">Contact</a>
-        </nav>
-        
-        <div class="header-actions">
-            <i class="fas fa-search search-icon" id="searchToggle" title="Search Collection"></i>
+            <nav id="main-nav">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#catalog">Catalog</a></li>
+                    <li><a href="#" id="contactLink">Contact</a></li>
+                </ul>
+
+                <div class="search-container">
+                    <input type="text" class="search-bar" id="searchInput" placeholder="Search product code..." autocomplete="off">
+                    <button class="search-btn" id="searchBtn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </nav>
+
+            <div class="header-stats">
+                <strong id="totalCount">304</strong> products
+            </div>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h4 class="hero-subtitle">Est. 1990</h4>
-            <h1 class="hero-title">Invitations Worth Remembering.</h1>
-            <p class="hero-description">The intersection of rich Indian heritage and modern luxury craftsmanship.</p>
-            <div class="hero-actions">
-                <a href="#find-card" class="btn-primary">Find Your Invitation</a>
-                <a href="#explore" class="btn-secondary-light">Explore the Collection</a>
-            </div>
+            <h1>Premium Printing Solutions</h1>
+            <p>Transforming your ideas into exquisite printed materials with unmatched quality and craftsmanship</p>
+            <a href="#catalog" class="btn">Explore Our Catalog</a>
         </div>
     </section>
 
-    <!-- Find Your Card (Intelligent Search) Section -->
-    <section class="find-card-section" id="find-card">
-        <div class="find-card-container">
-            <h2 class="section-title">Find the invitation that feels like yours.</h2>
-            <div class="intelligent-search-box">
-                <i class="fas fa-search"></i>
-                <input type="text" id="mainSearchInput" placeholder="Search card number, colour, style or occasion..." autocomplete="off">
-                <button class="search-submit">Find <i class="fas fa-arrow-right"></i></button>
-                <div class="live-suggestions" id="liveSuggestions"></div>
-            </div>
-            <div class="popular-searches">
-                <span>Popular:</span>
-                <span class="tag">Royal Gold</span>
-                <span class="tag">Minimal Box</span>
-                <span class="tag">Red Wedding Card</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Explore The Collection Section -->
-    <section class="explore-section" id="explore">
-        <div class="section-header">
-            <h2 class="section-title">Explore the Collection</h2>
-            <p class="section-subtitle">Every invitation has its own character.</p>
-        </div>
-        
-        <div class="explore-categories">
-            <div class="facet-group">
-                <h3>By Colour</h3>
-                <ul>
-                    <li data-facet="colours" data-value="ivory">Ivory</li>
-                    <li data-facet="colours" data-value="red">Red</li>
-                    <li data-facet="colours" data-value="burgundy">Burgundy</li>
-                    <li data-facet="colours" data-value="gold">Gold</li>
-                </ul>
-            </div>
-            <div class="facet-group">
-                <h3>By Style</h3>
-                <ul>
-                    <li data-facet="styles" data-value="royal">Royal</li>
-                    <li data-facet="styles" data-value="traditional">Traditional</li>
-                    <li data-facet="styles" data-value="minimal">Minimal</li>
-                    <li data-facet="styles" data-value="contemporary">Contemporary</li>
-                </ul>
-            </div>
-            <div class="facet-group">
-                <h3>By Occasion</h3>
-                <ul>
-                    <li data-facet="occasions" data-value="wedding">Wedding</li>
-                    <li data-facet="occasions" data-value="reception">Reception</li>
-                    <li data-facet="occasions" data-value="haldi">Haldi / Mehndi</li>
-                </ul>
-            </div>
-            <div class="facet-group">
-                <h3>By Format</h3>
-                <ul>
-                    <li data-facet="formats" data-value="premium box">Premium Box</li>
-                    <li data-facet="formats" data-value="folder">Folder</li>
-                    <li data-facet="formats" data-value="single card">Single Card</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="products-container" id="products-container">
-            <div class="products-header">
-                <h3 id="currentViewTitle">All Invitations</h3>
-                <div class="view-controls">
-                    <button id="mobileFilterBtn" class="btn-secondary" style="display: none;"><i class="fas fa-filter"></i> Filters</button>
-                    <span id="resultsCount">0 items found</span>
-                    <select id="sortSelect" class="sort-select">
-                        <option value="recommended">Recommended</option>
-                        <option value="newest">Newest</option>
-                        <option value="price-asc">Price: Low to High</option>
-                        <option value="price-desc">Price: High to Low</option>
-                    </select>
-                </div>
-            </div>
-            
-            <div class="products-grid" id="productsGrid">
-                <!-- Products dynamically rendered here -->
-            </div>
-            <div id="loadMoreContainer" class="load-more-container" style="display:none;">
-                <button id="loadMoreBtn" class="btn-secondary">Load More</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- AI Concierge Floating Chat -->
-    <div class="concierge-trigger" id="conciergeTrigger">
-        <i class="fas fa-sparkles"></i>
-        <span>Concierge</span>
-    </div>
-
-    <div class="concierge-panel" id="conciergePanel">
-        <div class="concierge-header">
-            <div>
-                <h4>BhatiaCards Concierge</h4>
-                <p>Personal Invitation Consultant</p>
-            </div>
-            <i class="fas fa-times" id="closeConcierge"></i>
-        </div>
-        <div class="concierge-body" id="conciergeChat">
-            <div class="message bot">
-                "Let's find an invitation that feels like your wedding. How can I help you today?"
-            </div>
-            <div class="concierge-suggestions" id="conciergeSuggestions">
-                <button data-query="Help me choose a royal card">Help me choose</button>
-                <button data-query="I have a colour in mind">I have a colour in mind</button>
-                <button data-query="I want a box invitation under 1500">I have a budget</button>
-            </div>
-        </div>
-        <div class="concierge-input-area">
-            <input type="text" id="conciergeInput" placeholder="e.g. Red royal wedding card...">
-            <button id="conciergeSend"><i class="fas fa-paper-plane"></i></button>
+    <!-- Filter Bar -->
+    <div class="filter-bar" id="catalog">
+        <div class="container filter-inner">
+            <span class="filter-label">Series:</span>
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="2100">2100</button>
+            <button class="filter-btn" data-filter="2200">2200</button>
+            <button class="filter-btn" data-filter="2300">2300</button>
+            <button class="filter-btn" data-filter="2400">2400</button>
+            <button class="filter-btn" data-filter="2500">2500</button>
+            <button class="filter-btn" data-filter="Shagun Envelope">Shagun Envelope</button>
+            <span class="results-count">Showing <strong id="showCount">304</strong> of 304</span>
         </div>
     </div>
 
-    <!-- Heritage Section -->
-    <section class="heritage-section" id="heritage">
-        <div class="heritage-container">
-            <div class="heritage-image">
-                <img src="https://images.unsplash.com/photo-1544365558-35aa4afcf11f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="BhatiaCards Heritage" loading="lazy">
-            </div>
-            <div class="heritage-content">
-                <h4 class="heritage-subtitle">Our Story</h4>
-                <h2 class="heritage-title">A Legacy of Craftsmanship</h2>
-                <p>Established in 1990 in Nangal, Punjab, BhatiaCards began with a simple vision: to celebrate life's most precious moments with elegance and timeless craftsmanship.</p>
-                <p>For over three decades, we have blended traditional Indian artistry with modern design to curate a collection that reflects the beauty of your unique story. Every card we create is a testament to our enduring commitment to luxury, quality, and your special day.</p>
-            </div>
+    <!-- Product Grid -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid" id="grid"></div>
         </div>
     </section>
 
-    <!-- Lightbox Modal -->
-    <div class="modal-overlay" id="productModal">
-        <div class="modal-content">
-            <button class="modal-close" id="closeModal"><i class="fas fa-times"></i></button>
-            
-            <div class="modal-image-section">
-                <img id="modalImg" class="modal-image" src="" alt="Card Detail">
-            </div>
-            
-            <div class="modal-info-section">
-                <div class="modal-series" id="modalSeries">BC-1101</div>
-                <h2 class="modal-title" id="modalTitle">Royal Burgundy</h2>
-                <div class="modal-price" id="modalPrice">₹120</div>
-                
-                <div class="modal-specs">
-                    <div class="spec-item">
-                        <span class="spec-label">Format</span>
-                        <span class="spec-value" id="modalFormat">Folder</span>
+    <!-- Image Modal -->
+    <div class="img-modal" id="imgModal">
+        <div class="modal-code" id="modalCode"></div>
+        <button class="modal-close-btn" id="imgModalClose"><i class="fas fa-times"></i></button>
+        <img id="modalImg" alt="Product">
+        <div class="modal-zoom">
+            <button id="zIn"><i class="fas fa-search-plus"></i></button>
+            <button id="zOut"><i class="fas fa-search-minus"></i></button>
+            <button id="zReset"><i class="fas fa-undo"></i></button>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div class="contact-modal" id="contactModal">
+        <div class="contact-modal-content">
+            <button class="contact-modal-close" id="contactModalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2 class="contact-modal-title">Contact Us</h2>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <div class="contact-details">
+                        <p><i class="fas fa-map-marker-alt"></i> 6, Adda-Market, Nangal, Punjab, India</p>
+                        <p><i class="fas fa-phone"></i> +91 98158-82824</p>
+                        <p><i class="fas fa-envelope"></i> bhatiacards.nangal@gmail.com</p>
+                        <p><i class="fas fa-clock"></i> Mon-Sat: 9AM - 6PM</p>
                     </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Colour Theme</span>
-                        <span class="spec-value" id="modalColor">Red, Gold</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Style</span>
-                        <span class="spec-value" id="modalStyle">Traditional, Royal</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Box Type</span>
-                        <span class="spec-value" id="modalBox">Standard</span>
+
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://wa.me/9815882824" target="_blank" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.instagram.com/bhatia_cards/" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/share/1BKRP3HEtV/" target="_blank" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
                     </div>
                 </div>
 
-                <div class="modal-tags" id="modalTags">
-                    <!-- Tags appended here -->
-                </div>
-                
-                <div class="action-buttons">
-                    <a href="#" id="whatsappBtn" target="_blank" class="btn-primary">
-                        <i class="fab fa-whatsapp"></i> Enquire on WhatsApp
-                    </a>
-                    <button id="downloadPdfBtn" class="btn-secondary">
-                        <i class="fas fa-file-pdf"></i> Download PDF
-                    </button>
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+
+    <button class="to-top" id="toTop"><i class="fas fa-chevron-up"></i></button>
 
     <!-- Footer -->
-    <footer class="footer" id="contact">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <a href="#" class="footer-logo">Bhatia<span>Cards</span></a>
-                <p>Premium printing solutions transforming your ideas into exquisite printed materials with unmatched quality.</p>
-            </div>
-            
-            <div class="footer-links">
-                <h3>Navigation</h3>
-                <a href="#home">Home</a>
-                <a href="#find-card">Find Your Card</a>
-                <a href="#explore">Collections</a>
+    <footer class="company-history">
+        <div class="container history-content">
+            <h2>Our Story</h2>
+            <p>BhatiaCards was founded in 1990 by Ravinder Bhatia with a vision to provide premium printing solutions that combine traditional craftsmanship with modern innovation. Starting as a small neighborhood print shop, we've grown into a trusted name in the printing industry, serving clients across India.</p>
+
+            <p>Today, under the leadership of Mohit Bhatia, we continue to uphold the values of quality, integrity, and customer satisfaction that our founder instilled in the company. We blend time-honored techniques with cutting-edge technology to create products that celebrate your special moments.</p>
+
+            <div class="founders">
+                <div class="founder">
+                    <div class="founder-img" style="background-image: url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'); background-size: cover; background-position: center;"></div>
+                    <h4>Ravinder Bhatia</h4>
+                    <p>Founder (1990-Present)</p>
+                </div>
+
+                <div class="founder">
+                    <div class="founder-img" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80'); background-size: cover; background-position: center;"></div>
+                    <h4>Mohit Bhatia</h4>
+                    <p>CEO (2021-Present)</p>
+                </div>
             </div>
 
-            <div class="footer-contact">
-                <h3>Contact Us</h3>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>6, Adda-Market, Nangal<br>Punjab, India 140124</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <span>+91 98158-82824</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-whatsapp"></i>
-                    <span><a href="https://wa.me/919815882824" target="_blank">Message us on WhatsApp</a></span>
-                </div>
-            </div>
+            <p>Our commitment to excellence has remained unchanged for over three decades. Each product that leaves our workshop carries the legacy of quality that the Bhatia name represents.</p>
         </div>
-        
-        <div class="footer-bottom">
-            &copy; 2026 BhatiaCards. All Rights Reserved.
+
+        <div class="copyright">
+            <div class="container">
+                <p>&copy; 2025 BhatiaCards. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="products.js"></script>
-    <script src="app.js"></script>
+    <script>
+        const products = [
+        {
+                "code": "2101",
+                "series": "2100",
+                "front": "images/2100/2101.jpeg",
+                "back": "images/2100/2101..jpeg",
+                "primary": "images/2100/2101.jpeg"
+        },
+        {
+                "code": "2104",
+                "series": "2100",
+                "front": "images/2100/2104.jpeg",
+                "back": "images/2100/2104..jpeg",
+                "primary": "images/2100/2104.jpeg"
+        },
+        {
+                "code": "2106",
+                "series": "2100",
+                "front": "images/2100/2106.jpeg",
+                "back": "images/2100/2106..jpeg",
+                "primary": "images/2100/2106.jpeg"
+        },
+        {
+                "code": "2107",
+                "series": "2100",
+                "front": "images/2100/2107.jpeg",
+                "back": "images/2100/2107..jpeg",
+                "primary": "images/2100/2107.jpeg"
+        },
+        {
+                "code": "2108",
+                "series": "2100",
+                "front": "images/2100/2108.jpeg",
+                "back": "images/2100/2108..jpeg",
+                "primary": "images/2100/2108.jpeg"
+        },
+        {
+                "code": "2109",
+                "series": "2100",
+                "front": "images/2100/2109.jpeg",
+                "back": "images/2100/2109..jpeg",
+                "primary": "images/2100/2109.jpeg"
+        },
+        {
+                "code": "2110",
+                "series": "2100",
+                "front": "images/2100/2110.jpeg",
+                "back": "images/2100/2110..jpeg",
+                "primary": "images/2100/2110.jpeg"
+        },
+        {
+                "code": "2111",
+                "series": "2100",
+                "front": "images/2100/2111.jpeg",
+                "back": "images/2100/2111..jpeg",
+                "primary": "images/2100/2111.jpeg"
+        },
+        {
+                "code": "2112",
+                "series": "2100",
+                "front": "images/2100/2112.jpeg",
+                "back": "images/2100/2112..jpeg",
+                "primary": "images/2100/2112.jpeg"
+        },
+        {
+                "code": "2114",
+                "series": "2100",
+                "front": "images/2100/2114.jpeg",
+                "back": "images/2100/2114..jpeg",
+                "primary": "images/2100/2114.jpeg"
+        },
+        {
+                "code": "2115",
+                "series": "2100",
+                "front": "images/2100/2115.jpeg",
+                "back": "images/2100/2115..jpeg",
+                "primary": "images/2100/2115.jpeg"
+        },
+        {
+                "code": "2118",
+                "series": "2100",
+                "front": "images/2100/2118.jpeg",
+                "back": "images/2100/2118..jpeg",
+                "primary": "images/2100/2118.jpeg"
+        },
+        {
+                "code": "2119",
+                "series": "2100",
+                "front": "images/2100/2119.jpeg",
+                "back": "images/2100/2119..jpeg",
+                "primary": "images/2100/2119.jpeg"
+        },
+        {
+                "code": "2120",
+                "series": "2100",
+                "front": "images/2100/2120.jpeg",
+                "back": "images/2100/2120..jpeg",
+                "primary": "images/2100/2120.jpeg"
+        },
+        {
+                "code": "2121",
+                "series": "2100",
+                "front": "images/2100/2121.jpeg",
+                "back": "images/2100/2121..jpeg",
+                "primary": "images/2100/2121.jpeg"
+        },
+        {
+                "code": "2124",
+                "series": "2100",
+                "front": "images/2100/2124.jpeg",
+                "back": null,
+                "primary": "images/2100/2124.jpeg"
+        },
+        {
+                "code": "2125",
+                "series": "2100",
+                "front": "images/2100/2125.jpeg",
+                "back": "images/2100/2125..jpeg",
+                "primary": "images/2100/2125.jpeg"
+        },
+        {
+                "code": "2127",
+                "series": "2100",
+                "front": "images/2100/2127.jpeg",
+                "back": "images/2100/2127..jpeg",
+                "primary": "images/2100/2127.jpeg"
+        },
+        {
+                "code": "2128",
+                "series": "2100",
+                "front": "images/2100/2128.jpeg",
+                "back": "images/2100/2128..jpeg",
+                "primary": "images/2100/2128.jpeg"
+        },
+        {
+                "code": "2129",
+                "series": "2100",
+                "front": "images/2100/2129.jpeg",
+                "back": "images/2100/2129..jpeg",
+                "primary": "images/2100/2129.jpeg"
+        },
+        {
+                "code": "2130",
+                "series": "2100",
+                "front": "images/2100/2130.jpeg",
+                "back": "images/2100/2130..jpeg",
+                "primary": "images/2100/2130.jpeg"
+        },
+        {
+                "code": "2131",
+                "series": "2100",
+                "front": "images/2100/2131.jpeg",
+                "back": "images/2100/2131..jpeg",
+                "primary": "images/2100/2131.jpeg"
+        },
+        {
+                "code": "2132",
+                "series": "2100",
+                "front": "images/2100/2132.jpeg",
+                "back": "images/2100/2132..jpeg",
+                "primary": "images/2100/2132.jpeg"
+        },
+        {
+                "code": "2133",
+                "series": "2100",
+                "front": "images/2100/2133.jpeg",
+                "back": "images/2100/2133..jpeg",
+                "primary": "images/2100/2133.jpeg"
+        },
+        {
+                "code": "2134",
+                "series": "2100",
+                "front": "images/2100/2134.jpeg",
+                "back": "images/2100/2134..jpeg",
+                "primary": "images/2100/2134.jpeg"
+        },
+        {
+                "code": "2135",
+                "series": "2100",
+                "front": "images/2100/2135.jpeg",
+                "back": "images/2100/2135..jpeg",
+                "primary": "images/2100/2135.jpeg"
+        },
+        {
+                "code": "2136",
+                "series": "2100",
+                "front": "images/2100/2136.jpeg",
+                "back": "images/2100/2136..jpeg",
+                "primary": "images/2100/2136.jpeg"
+        },
+        {
+                "code": "2137",
+                "series": "2100",
+                "front": "images/2100/2137.jpeg",
+                "back": "images/2100/2137..jpeg",
+                "primary": "images/2100/2137.jpeg"
+        },
+        {
+                "code": "2138",
+                "series": "2100",
+                "front": "images/2100/2138.jpeg",
+                "back": "images/2100/2138..jpeg",
+                "primary": "images/2100/2138.jpeg"
+        },
+        {
+                "code": "2139",
+                "series": "2100",
+                "front": "images/2100/2139.jpeg",
+                "back": "images/2100/2139..jpeg",
+                "primary": "images/2100/2139.jpeg"
+        },
+        {
+                "code": "2140",
+                "series": "2100",
+                "front": "images/2100/2140.jpeg",
+                "back": "images/2100/2140..jpeg",
+                "primary": "images/2100/2140.jpeg"
+        },
+        {
+                "code": "2142",
+                "series": "2100",
+                "front": "images/2100/2142.jpeg",
+                "back": "images/2100/2142..jpeg",
+                "primary": "images/2100/2142.jpeg"
+        },
+        {
+                "code": "2143",
+                "series": "2100",
+                "front": "images/2100/2143.jpeg",
+                "back": "images/2100/2143..jpeg",
+                "primary": "images/2100/2143.jpeg"
+        },
+        {
+                "code": "2144",
+                "series": "2100",
+                "front": "images/2100/2144.jpeg",
+                "back": "images/2100/2144..jpeg",
+                "primary": "images/2100/2144.jpeg"
+        },
+        {
+                "code": "2145",
+                "series": "2100",
+                "front": "images/2100/2145.jpeg",
+                "back": "images/2100/2145..jpeg",
+                "primary": "images/2100/2145.jpeg"
+        },
+        {
+                "code": "2146",
+                "series": "2100",
+                "front": "images/2100/2146.jpeg",
+                "back": "images/2100/2146..jpeg",
+                "primary": "images/2100/2146.jpeg"
+        },
+        {
+                "code": "2147",
+                "series": "2100",
+                "front": "images/2100/2147.jpeg",
+                "back": "images/2100/2147..jpeg",
+                "primary": "images/2100/2147.jpeg"
+        },
+        {
+                "code": "2148",
+                "series": "2100",
+                "front": "images/2100/2148.jpeg",
+                "back": "images/2100/2148..jpeg",
+                "primary": "images/2100/2148.jpeg"
+        },
+        {
+                "code": "2151",
+                "series": "2100",
+                "front": null,
+                "back": "images/2100/2151..jpeg",
+                "primary": "images/2100/2151..jpeg"
+        },
+        {
+                "code": "2152",
+                "series": "2100",
+                "front": "images/2100/2152.jpeg",
+                "back": "images/2100/2152..jpeg",
+                "primary": "images/2100/2152.jpeg"
+        },
+        {
+                "code": "2153",
+                "series": "2100",
+                "front": "images/2100/2153.jpeg",
+                "back": "images/2100/2153..jpeg",
+                "primary": "images/2100/2153.jpeg"
+        },
+        {
+                "code": "2154",
+                "series": "2100",
+                "front": "images/2100/2154.jpeg",
+                "back": "images/2100/2154..jpeg",
+                "primary": "images/2100/2154.jpeg"
+        },
+        {
+                "code": "2155",
+                "series": "2100",
+                "front": "images/2100/2155.jpeg",
+                "back": "images/2100/2155..jpeg",
+                "primary": "images/2100/2155.jpeg"
+        },
+        {
+                "code": "2156",
+                "series": "2100",
+                "front": "images/2100/2156.jpeg",
+                "back": "images/2100/2156..jpeg",
+                "primary": "images/2100/2156.jpeg"
+        },
+        {
+                "code": "2157",
+                "series": "2100",
+                "front": "images/2100/2157.jpeg",
+                "back": "images/2100/2157..jpeg",
+                "primary": "images/2100/2157.jpeg"
+        },
+        {
+                "code": "2158",
+                "series": "2100",
+                "front": "images/2100/2158.jpeg",
+                "back": "images/2100/2158..jpeg",
+                "primary": "images/2100/2158.jpeg"
+        },
+        {
+                "code": "2160",
+                "series": "2100",
+                "front": "images/2100/2160.jpeg",
+                "back": "images/2100/2160..jpeg",
+                "primary": "images/2100/2160.jpeg"
+        },
+        {
+                "code": "2161",
+                "series": "2100",
+                "front": "images/2100/2161.jpeg",
+                "back": "images/2100/2161..jpeg",
+                "primary": "images/2100/2161.jpeg"
+        },
+        {
+                "code": "2163",
+                "series": "2100",
+                "front": "images/2100/2163.jpeg",
+                "back": "images/2100/2163..jpeg",
+                "primary": "images/2100/2163.jpeg"
+        },
+        {
+                "code": "2164",
+                "series": "2100",
+                "front": "images/2100/2164.jpeg",
+                "back": "images/2100/2164..jpeg",
+                "primary": "images/2100/2164.jpeg"
+        },
+        {
+                "code": "2166",
+                "series": "2100",
+                "front": "images/2100/2166.jpeg",
+                "back": "images/2100/2166..jpeg",
+                "primary": "images/2100/2166.jpeg"
+        },
+        {
+                "code": "2167",
+                "series": "2100",
+                "front": "images/2100/2167.jpeg",
+                "back": "images/2100/2167..jpeg",
+                "primary": "images/2100/2167.jpeg"
+        },
+        {
+                "code": "2168",
+                "series": "2100",
+                "front": "images/2100/2168.jpeg",
+                "back": "images/2100/2168..jpeg",
+                "primary": "images/2100/2168.jpeg"
+        },
+        {
+                "code": "2169",
+                "series": "2100",
+                "front": "images/2100/2169.jpeg",
+                "back": "images/2100/2169..jpeg",
+                "primary": "images/2100/2169.jpeg"
+        },
+        {
+                "code": "2170",
+                "series": "2100",
+                "front": "images/2100/2170.jpeg",
+                "back": "images/2100/2170..jpeg",
+                "primary": "images/2100/2170.jpeg"
+        },
+        {
+                "code": "2171",
+                "series": "2100",
+                "front": "images/2100/2171.jpeg",
+                "back": "images/2100/2171..jpeg",
+                "primary": "images/2100/2171.jpeg"
+        },
+        {
+                "code": "2172",
+                "series": "2100",
+                "front": "images/2100/2172.jpeg",
+                "back": "images/2100/2172..jpeg",
+                "primary": "images/2100/2172.jpeg"
+        },
+        {
+                "code": "2173",
+                "series": "2100",
+                "front": "images/2100/2173.jpeg",
+                "back": "images/2100/2173..jpeg",
+                "primary": "images/2100/2173.jpeg"
+        },
+        {
+                "code": "2174",
+                "series": "2100",
+                "front": "images/2100/2174.jpeg",
+                "back": "images/2100/2174..jpeg",
+                "primary": "images/2100/2174.jpeg"
+        },
+        {
+                "code": "2175",
+                "series": "2100",
+                "front": "images/2100/2175.jpeg",
+                "back": "images/2100/2175..jpeg",
+                "primary": "images/2100/2175.jpeg"
+        },
+        {
+                "code": "2176",
+                "series": "2100",
+                "front": "images/2100/2176.jpeg",
+                "back": "images/2100/2176..jpeg",
+                "primary": "images/2100/2176.jpeg"
+        },
+        {
+                "code": "2177",
+                "series": "2100",
+                "front": "images/2100/2177.jpeg",
+                "back": "images/2100/2177..jpeg",
+                "primary": "images/2100/2177.jpeg"
+        },
+        {
+                "code": "2178",
+                "series": "2100",
+                "front": "images/2100/2178.jpeg",
+                "back": "images/2100/2178..jpeg",
+                "primary": "images/2100/2178.jpeg"
+        },
+        {
+                "code": "2180",
+                "series": "2100",
+                "front": "images/2100/2180.jpeg",
+                "back": "images/2100/2180..jpeg",
+                "primary": "images/2100/2180.jpeg"
+        },
+        {
+                "code": "2181",
+                "series": "2100",
+                "front": "images/2100/2181.jpeg",
+                "back": "images/2100/2181..jpeg",
+                "primary": "images/2100/2181.jpeg"
+        },
+        {
+                "code": "2183",
+                "series": "2100",
+                "front": "images/2100/2183.jpeg",
+                "back": "images/2100/2183..jpeg",
+                "primary": "images/2100/2183.jpeg"
+        },
+        {
+                "code": "2184",
+                "series": "2100",
+                "front": "images/2100/2184.jpeg",
+                "back": "images/2100/2184..jpeg",
+                "primary": "images/2100/2184.jpeg"
+        },
+        {
+                "code": "2185",
+                "series": "2100",
+                "front": "images/2100/2185.jpeg",
+                "back": "images/2100/2185..jpeg",
+                "primary": "images/2100/2185.jpeg"
+        },
+        {
+                "code": "2186",
+                "series": "2100",
+                "front": "images/2100/2186.jpeg",
+                "back": "images/2100/2186..jpeg",
+                "primary": "images/2100/2186.jpeg"
+        },
+        {
+                "code": "2187",
+                "series": "2100",
+                "front": "images/2100/2187.jpeg",
+                "back": "images/2100/2187..jpeg",
+                "primary": "images/2100/2187.jpeg"
+        },
+        {
+                "code": "2188",
+                "series": "2100",
+                "front": "images/2100/2188.jpeg",
+                "back": "images/2100/2188..jpeg",
+                "primary": "images/2100/2188.jpeg"
+        },
+        {
+                "code": "2191",
+                "series": "2100",
+                "front": "images/2100/2191.jpeg",
+                "back": "images/2100/2191..jpeg",
+                "primary": "images/2100/2191.jpeg"
+        },
+        {
+                "code": "2192",
+                "series": "2100",
+                "front": "images/2100/2192.jpeg",
+                "back": "images/2100/2192..jpeg",
+                "primary": "images/2100/2192.jpeg"
+        },
+        {
+                "code": "2193",
+                "series": "2100",
+                "front": "images/2100/2193.jpeg",
+                "back": "images/2100/2193..jpeg",
+                "primary": "images/2100/2193.jpeg"
+        },
+        {
+                "code": "2194",
+                "series": "2100",
+                "front": "images/2100/2194.jpeg",
+                "back": "images/2100/2194..jpeg",
+                "primary": "images/2100/2194.jpeg"
+        },
+        {
+                "code": "2195",
+                "series": "2100",
+                "front": "images/2100/2195.jpeg",
+                "back": "images/2100/2195..jpeg",
+                "primary": "images/2100/2195.jpeg"
+        },
+        {
+                "code": "2197",
+                "series": "2100",
+                "front": "images/2100/2197.jpeg",
+                "back": "images/2100/2197..jpeg",
+                "primary": "images/2100/2197.jpeg"
+        },
+        {
+                "code": "2201",
+                "series": "2200",
+                "front": "images/2200/2201.jpeg",
+                "back": "images/2200/2201..jpeg",
+                "primary": "images/2200/2201.jpeg"
+        },
+        {
+                "code": "2202",
+                "series": "2200",
+                "front": "images/2200/2202.jpeg",
+                "back": "images/2200/2202..jpeg",
+                "primary": "images/2200/2202.jpeg"
+        },
+        {
+                "code": "2203",
+                "series": "2200",
+                "front": "images/2200/2203.jpeg",
+                "back": "images/2200/2203..jpeg",
+                "primary": "images/2200/2203.jpeg"
+        },
+        {
+                "code": "2204",
+                "series": "2200",
+                "front": "images/2200/2204.jpeg",
+                "back": "images/2200/2204..jpeg",
+                "primary": "images/2200/2204.jpeg"
+        },
+        {
+                "code": "2252",
+                "series": "2200",
+                "front": "images/2200/2252.jpeg",
+                "back": "images/2200/2252..jpeg",
+                "primary": "images/2200/2252.jpeg"
+        },
+        {
+                "code": "2253",
+                "series": "2200",
+                "front": "images/2200/2253.jpeg",
+                "back": "images/2200/2253..jpeg",
+                "primary": "images/2200/2253.jpeg"
+        },
+        {
+                "code": "2254",
+                "series": "2200",
+                "front": "images/2200/2254.jpeg",
+                "back": null,
+                "primary": "images/2200/2254.jpeg"
+        },
+        {
+                "code": "2255",
+                "series": "2200",
+                "front": "images/2200/2255.jpeg",
+                "back": "images/2200/2255..jpeg",
+                "primary": "images/2200/2255.jpeg"
+        },
+        {
+                "code": "2256",
+                "series": "2200",
+                "front": "images/2200/2256.jpeg",
+                "back": "images/2200/2256..jpeg",
+                "primary": "images/2200/2256.jpeg"
+        },
+        {
+                "code": "2257",
+                "series": "2200",
+                "front": "images/2200/2257.jpeg",
+                "back": "images/2200/2257..jpeg",
+                "primary": "images/2200/2257.jpeg"
+        },
+        {
+                "code": "2258",
+                "series": "2200",
+                "front": "images/2200/2258.jpeg",
+                "back": "images/2200/2258..jpeg",
+                "primary": "images/2200/2258.jpeg"
+        },
+        {
+                "code": "2259",
+                "series": "2200",
+                "front": "images/2200/2259.jpeg",
+                "back": "images/2200/2259..jpeg",
+                "primary": "images/2200/2259.jpeg"
+        },
+        {
+                "code": "2260",
+                "series": "2200",
+                "front": "images/2200/2260.jpeg",
+                "back": "images/2200/2260..jpeg",
+                "primary": "images/2200/2260.jpeg"
+        },
+        {
+                "code": "2261",
+                "series": "2200",
+                "front": "images/2200/2261.jpeg",
+                "back": "images/2200/2261..jpeg",
+                "primary": "images/2200/2261.jpeg"
+        },
+        {
+                "code": "2262",
+                "series": "2200",
+                "front": "images/2200/2262.jpeg",
+                "back": "images/2200/2262..jpeg",
+                "primary": "images/2200/2262.jpeg"
+        },
+        {
+                "code": "2264",
+                "series": "2200",
+                "front": "images/2200/2264.jpeg",
+                "back": "images/2200/2264..jpeg",
+                "primary": "images/2200/2264.jpeg"
+        },
+        {
+                "code": "2267",
+                "series": "2200",
+                "front": "images/2200/2267.jpeg",
+                "back": "images/2200/2267..jpeg",
+                "primary": "images/2200/2267.jpeg"
+        },
+        {
+                "code": "2268",
+                "series": "2200",
+                "front": "images/2200/2268.jpeg",
+                "back": "images/2200/2268..jpeg",
+                "primary": "images/2200/2268.jpeg"
+        },
+        {
+                "code": "2270",
+                "series": "2200",
+                "front": "images/2200/2270.jpeg",
+                "back": "images/2200/2270..jpeg",
+                "primary": "images/2200/2270.jpeg"
+        },
+        {
+                "code": "2271",
+                "series": "2200",
+                "front": "images/2200/2271.jpeg",
+                "back": "images/2200/2271..jpeg",
+                "primary": "images/2200/2271.jpeg"
+        },
+        {
+                "code": "2272",
+                "series": "2200",
+                "front": "images/2200/2272.jpeg",
+                "back": "images/2200/2272..jpeg",
+                "primary": "images/2200/2272.jpeg"
+        },
+        {
+                "code": "2273",
+                "series": "2200",
+                "front": "images/2200/2273.jpeg",
+                "back": "images/2200/2273..jpeg",
+                "primary": "images/2200/2273.jpeg"
+        },
+        {
+                "code": "2274",
+                "series": "2200",
+                "front": "images/2200/2274.jpeg",
+                "back": "images/2200/2274..jpeg",
+                "primary": "images/2200/2274.jpeg"
+        },
+        {
+                "code": "2275",
+                "series": "2200",
+                "front": "images/2200/2275.jpeg",
+                "back": "images/2200/2275..jpeg",
+                "primary": "images/2200/2275.jpeg"
+        },
+        {
+                "code": "2276",
+                "series": "2200",
+                "front": "images/2200/2276.jpeg",
+                "back": "images/2200/2276..jpeg",
+                "primary": "images/2200/2276.jpeg"
+        },
+        {
+                "code": "2277",
+                "series": "2200",
+                "front": "images/2200/2277.jpeg",
+                "back": "images/2200/2277..jpeg",
+                "primary": "images/2200/2277.jpeg"
+        },
+        {
+                "code": "2278",
+                "series": "2200",
+                "front": "images/2200/2278.jpeg",
+                "back": "images/2200/2278..jpeg",
+                "primary": "images/2200/2278.jpeg"
+        },
+        {
+                "code": "2254",
+                "series": "2300",
+                "front": null,
+                "back": "images/2300/2254..jpeg",
+                "primary": "images/2300/2254..jpeg"
+        },
+        {
+                "code": "2301",
+                "series": "2300",
+                "front": "images/2300/2301.jpeg",
+                "back": "images/2300/2301..jpeg",
+                "primary": "images/2300/2301.jpeg"
+        },
+        {
+                "code": "2304",
+                "series": "2300",
+                "front": "images/2300/2304.jpeg",
+                "back": "images/2300/2304..jpeg",
+                "primary": "images/2300/2304.jpeg"
+        },
+        {
+                "code": "2308",
+                "series": "2300",
+                "front": "images/2300/2308.jpeg",
+                "back": "images/2300/2308..jpeg",
+                "primary": "images/2300/2308.jpeg"
+        },
+        {
+                "code": "2309",
+                "series": "2300",
+                "front": "images/2300/2309.jpeg",
+                "back": "images/2300/2309..jpeg",
+                "primary": "images/2300/2309.jpeg"
+        },
+        {
+                "code": "2310",
+                "series": "2300",
+                "front": "images/2300/2310.jpeg",
+                "back": "images/2300/2310..jpeg",
+                "primary": "images/2300/2310.jpeg"
+        },
+        {
+                "code": "2313",
+                "series": "2300",
+                "front": "images/2300/2313.jpeg",
+                "back": "images/2300/2313..jpeg",
+                "primary": "images/2300/2313.jpeg"
+        },
+        {
+                "code": "2314",
+                "series": "2300",
+                "front": "images/2300/2314.jpeg",
+                "back": "images/2300/2314..jpeg",
+                "primary": "images/2300/2314.jpeg"
+        },
+        {
+                "code": "2315",
+                "series": "2300",
+                "front": "images/2300/2315.jpeg",
+                "back": "images/2300/2315..jpeg",
+                "primary": "images/2300/2315.jpeg"
+        },
+        {
+                "code": "2316",
+                "series": "2300",
+                "front": "images/2300/2316.jpeg",
+                "back": "images/2300/2316..jpeg",
+                "primary": "images/2300/2316.jpeg"
+        },
+        {
+                "code": "2317",
+                "series": "2300",
+                "front": "images/2300/2317.jpeg",
+                "back": "images/2300/2317..jpeg",
+                "primary": "images/2300/2317.jpeg"
+        },
+        {
+                "code": "2318",
+                "series": "2300",
+                "front": "images/2300/2318.jpeg",
+                "back": "images/2300/2318..jpeg",
+                "primary": "images/2300/2318.jpeg"
+        },
+        {
+                "code": "2319",
+                "series": "2300",
+                "front": "images/2300/2319.jpeg",
+                "back": "images/2300/2319..jpeg",
+                "primary": "images/2300/2319.jpeg"
+        },
+        {
+                "code": "2320",
+                "series": "2300",
+                "front": "images/2300/2320.jpeg",
+                "back": "images/2300/2320..jpeg",
+                "primary": "images/2300/2320.jpeg"
+        },
+        {
+                "code": "2322",
+                "series": "2300",
+                "front": "images/2300/2322.jpeg",
+                "back": "images/2300/2322..jpeg",
+                "primary": "images/2300/2322.jpeg"
+        },
+        {
+                "code": "2323",
+                "series": "2300",
+                "front": "images/2300/2323.jpeg",
+                "back": "images/2300/2323..jpeg",
+                "primary": "images/2300/2323.jpeg"
+        },
+        {
+                "code": "2326",
+                "series": "2300",
+                "front": "images/2300/2326.jpeg",
+                "back": "images/2300/2326..jpeg",
+                "primary": "images/2300/2326.jpeg"
+        },
+        {
+                "code": "2327",
+                "series": "2300",
+                "front": "images/2300/2327.jpeg",
+                "back": "images/2300/2327..jpeg",
+                "primary": "images/2300/2327.jpeg"
+        },
+        {
+                "code": "2328",
+                "series": "2300",
+                "front": "images/2300/2328.jpeg",
+                "back": "images/2300/2328..jpeg",
+                "primary": "images/2300/2328.jpeg"
+        },
+        {
+                "code": "2329",
+                "series": "2300",
+                "front": "images/2300/2329.jpeg",
+                "back": "images/2300/2329..jpeg",
+                "primary": "images/2300/2329.jpeg"
+        },
+        {
+                "code": "2332",
+                "series": "2300",
+                "front": "images/2300/2332.jpeg",
+                "back": "images/2300/2332..jpeg",
+                "primary": "images/2300/2332.jpeg"
+        },
+        {
+                "code": "2333",
+                "series": "2300",
+                "front": "images/2300/2333.jpeg",
+                "back": "images/2300/2333..jpeg",
+                "primary": "images/2300/2333.jpeg"
+        },
+        {
+                "code": "2334",
+                "series": "2300",
+                "front": "images/2300/2334.jpeg",
+                "back": "images/2300/2334..jpeg",
+                "primary": "images/2300/2334.jpeg"
+        },
+        {
+                "code": "2335",
+                "series": "2300",
+                "front": "images/2300/2335.jpeg",
+                "back": "images/2300/2335..jpeg",
+                "primary": "images/2300/2335.jpeg"
+        },
+        {
+                "code": "2336",
+                "series": "2300",
+                "front": "images/2300/2336.jpeg",
+                "back": "images/2300/2336..jpeg",
+                "primary": "images/2300/2336.jpeg"
+        },
+        {
+                "code": "2337",
+                "series": "2300",
+                "front": "images/2300/2337.jpeg",
+                "back": "images/2300/2337..jpeg",
+                "primary": "images/2300/2337.jpeg"
+        },
+        {
+                "code": "2340",
+                "series": "2300",
+                "front": "images/2300/2340.jpeg",
+                "back": "images/2300/2340..jpeg",
+                "primary": "images/2300/2340.jpeg"
+        },
+        {
+                "code": "2342",
+                "series": "2300",
+                "front": "images/2300/2342.jpeg",
+                "back": "images/2300/2342..jpeg",
+                "primary": "images/2300/2342.jpeg"
+        },
+        {
+                "code": "2344",
+                "series": "2300",
+                "front": "images/2300/2344.jpeg",
+                "back": "images/2300/2344..jpeg",
+                "primary": "images/2300/2344.jpeg"
+        },
+        {
+                "code": "2345",
+                "series": "2300",
+                "front": null,
+                "back": "images/2300/2345..jpeg",
+                "primary": "images/2300/2345..jpeg"
+        },
+        {
+                "code": "2346",
+                "series": "2300",
+                "front": "images/2300/2346.jpeg",
+                "back": "images/2300/2346..jpeg",
+                "primary": "images/2300/2346.jpeg"
+        },
+        {
+                "code": "2347",
+                "series": "2300",
+                "front": "images/2300/2347.jpeg",
+                "back": "images/2300/2347..jpeg",
+                "primary": "images/2300/2347.jpeg"
+        },
+        {
+                "code": "2348",
+                "series": "2300",
+                "front": "images/2300/2348.jpeg",
+                "back": null,
+                "primary": "images/2300/2348.jpeg"
+        },
+        {
+                "code": "2349",
+                "series": "2300",
+                "front": "images/2300/2349.jpeg",
+                "back": "images/2300/2349..jpeg",
+                "primary": "images/2300/2349.jpeg"
+        },
+        {
+                "code": "2352",
+                "series": "2300",
+                "front": "images/2300/2352.jpeg",
+                "back": "images/2300/2352..jpeg",
+                "primary": "images/2300/2352.jpeg"
+        },
+        {
+                "code": "2353",
+                "series": "2300",
+                "front": "images/2300/2353.jpeg",
+                "back": "images/2300/2353..jpeg",
+                "primary": "images/2300/2353.jpeg"
+        },
+        {
+                "code": "2354",
+                "series": "2300",
+                "front": "images/2300/2354.jpeg",
+                "back": "images/2300/2354..jpeg",
+                "primary": "images/2300/2354.jpeg"
+        },
+        {
+                "code": "2355",
+                "series": "2300",
+                "front": "images/2300/2355.jpeg",
+                "back": "images/2300/2355..jpeg",
+                "primary": "images/2300/2355.jpeg"
+        },
+        {
+                "code": "2356",
+                "series": "2300",
+                "front": "images/2300/2356.jpeg",
+                "back": "images/2300/2356..jpeg",
+                "primary": "images/2300/2356.jpeg"
+        },
+        {
+                "code": "2357",
+                "series": "2300",
+                "front": "images/2300/2357.jpeg",
+                "back": "images/2300/2357..jpeg",
+                "primary": "images/2300/2357.jpeg"
+        },
+        {
+                "code": "2358",
+                "series": "2300",
+                "front": "images/2300/2358.jpeg",
+                "back": "images/2300/2358..jpeg",
+                "primary": "images/2300/2358.jpeg"
+        },
+        {
+                "code": "2359",
+                "series": "2300",
+                "front": "images/2300/2359.jpeg",
+                "back": "images/2300/2359..jpeg",
+                "primary": "images/2300/2359.jpeg"
+        },
+        {
+                "code": "2360",
+                "series": "2300",
+                "front": "images/2300/2360.jpeg",
+                "back": "images/2300/2360..jpeg",
+                "primary": "images/2300/2360.jpeg"
+        },
+        {
+                "code": "2361",
+                "series": "2300",
+                "front": "images/2300/2361.jpeg",
+                "back": "images/2300/2361..jpeg",
+                "primary": "images/2300/2361.jpeg"
+        },
+        {
+                "code": "2362",
+                "series": "2300",
+                "front": "images/2300/2362.jpeg",
+                "back": "images/2300/2362..jpeg",
+                "primary": "images/2300/2362.jpeg"
+        },
+        {
+                "code": "2363",
+                "series": "2300",
+                "front": "images/2300/2363.jpeg",
+                "back": "images/2300/2363..jpeg",
+                "primary": "images/2300/2363.jpeg"
+        },
+        {
+                "code": "2365",
+                "series": "2300",
+                "front": "images/2300/2365.jpeg",
+                "back": "images/2300/2365..jpeg",
+                "primary": "images/2300/2365.jpeg"
+        },
+        {
+                "code": "2366",
+                "series": "2300",
+                "front": "images/2300/2366.jpeg",
+                "back": "images/2300/2366..jpeg",
+                "primary": "images/2300/2366.jpeg"
+        },
+        {
+                "code": "2367",
+                "series": "2300",
+                "front": "images/2300/2367.jpeg",
+                "back": "images/2300/2367..jpeg",
+                "primary": "images/2300/2367.jpeg"
+        },
+        {
+                "code": "2368",
+                "series": "2300",
+                "front": "images/2300/2368.jpeg",
+                "back": "images/2300/2368..jpeg",
+                "primary": "images/2300/2368.jpeg"
+        },
+        {
+                "code": "2369",
+                "series": "2300",
+                "front": "images/2300/2369.jpeg",
+                "back": "images/2300/2369..jpeg",
+                "primary": "images/2300/2369.jpeg"
+        },
+        {
+                "code": "2370",
+                "series": "2300",
+                "front": "images/2300/2370.jpeg",
+                "back": "images/2300/2370..jpeg",
+                "primary": "images/2300/2370.jpeg"
+        },
+        {
+                "code": "2371",
+                "series": "2300",
+                "front": "images/2300/2371.jpeg",
+                "back": "images/2300/2371..jpeg",
+                "primary": "images/2300/2371.jpeg"
+        },
+        {
+                "code": "2373",
+                "series": "2300",
+                "front": "images/2300/2373.jpeg",
+                "back": "images/2300/2373..jpeg",
+                "primary": "images/2300/2373.jpeg"
+        },
+        {
+                "code": "2376",
+                "series": "2300",
+                "front": "images/2300/2376.jpeg",
+                "back": "images/2300/2376..jpeg",
+                "primary": "images/2300/2376.jpeg"
+        },
+        {
+                "code": "2381",
+                "series": "2300",
+                "front": "images/2300/2381.jpeg",
+                "back": "images/2300/2381..jpeg",
+                "primary": "images/2300/2381.jpeg"
+        },
+        {
+                "code": "2402",
+                "series": "2400",
+                "front": "images/2400/2402.jpeg",
+                "back": "images/2400/2402..jpeg",
+                "primary": "images/2400/2402.jpeg"
+        },
+        {
+                "code": "2404",
+                "series": "2400",
+                "front": "images/2400/2404.jpeg",
+                "back": "images/2400/2404..jpeg",
+                "primary": "images/2400/2404.jpeg"
+        },
+        {
+                "code": "2407",
+                "series": "2400",
+                "front": "images/2400/2407.jpeg",
+                "back": "images/2400/2407..jpeg",
+                "primary": "images/2400/2407.jpeg"
+        },
+        {
+                "code": "2409",
+                "series": "2400",
+                "front": "images/2400/2409.jpeg",
+                "back": "images/2400/2409..jpeg",
+                "primary": "images/2400/2409.jpeg"
+        },
+        {
+                "code": "2410",
+                "series": "2400",
+                "front": "images/2400/2410.jpeg",
+                "back": "images/2400/2410..jpeg",
+                "primary": "images/2400/2410.jpeg"
+        },
+        {
+                "code": "2411",
+                "series": "2400",
+                "front": "images/2400/2411.jpeg",
+                "back": "images/2400/2411..jpeg",
+                "primary": "images/2400/2411.jpeg"
+        },
+        {
+                "code": "2412",
+                "series": "2400",
+                "front": "images/2400/2412.jpeg",
+                "back": "images/2400/2412..jpeg",
+                "primary": "images/2400/2412.jpeg"
+        },
+        {
+                "code": "2413",
+                "series": "2400",
+                "front": "images/2400/2413.jpeg",
+                "back": "images/2400/2413..jpeg",
+                "primary": "images/2400/2413.jpeg"
+        },
+        {
+                "code": "2414",
+                "series": "2400",
+                "front": "images/2400/2414.jpeg",
+                "back": "images/2400/2414..jpeg",
+                "primary": "images/2400/2414.jpeg"
+        },
+        {
+                "code": "2415",
+                "series": "2400",
+                "front": "images/2400/2415.jpeg",
+                "back": "images/2400/2415..jpeg",
+                "primary": "images/2400/2415.jpeg"
+        },
+        {
+                "code": "2424",
+                "series": "2400",
+                "front": "images/2400/2424.jpeg",
+                "back": "images/2400/2424..jpeg",
+                "primary": "images/2400/2424.jpeg"
+        },
+        {
+                "code": "2425",
+                "series": "2400",
+                "front": "images/2400/2425.jpeg",
+                "back": "images/2400/2425..jpeg",
+                "primary": "images/2400/2425.jpeg"
+        },
+        {
+                "code": "2426",
+                "series": "2400",
+                "front": "images/2400/2426.jpeg",
+                "back": "images/2400/2426..jpeg",
+                "primary": "images/2400/2426.jpeg"
+        },
+        {
+                "code": "2430",
+                "series": "2400",
+                "front": "images/2400/2430.jpeg",
+                "back": "images/2400/2430..jpeg",
+                "primary": "images/2400/2430.jpeg"
+        },
+        {
+                "code": "2431",
+                "series": "2400",
+                "front": "images/2400/2431.jpeg",
+                "back": null,
+                "primary": "images/2400/2431.jpeg"
+        },
+        {
+                "code": "2432",
+                "series": "2400",
+                "front": "images/2400/2432.jpeg",
+                "back": "images/2400/2432..jpeg",
+                "primary": "images/2400/2432.jpeg"
+        },
+        {
+                "code": "2433",
+                "series": "2400",
+                "front": "images/2400/2433.jpeg",
+                "back": "images/2400/2433..jpeg",
+                "primary": "images/2400/2433.jpeg"
+        },
+        {
+                "code": "2434",
+                "series": "2400",
+                "front": "images/2400/2434.jpeg",
+                "back": "images/2400/2434..jpeg",
+                "primary": "images/2400/2434.jpeg"
+        },
+        {
+                "code": "2435",
+                "series": "2400",
+                "front": "images/2400/2435.jpeg",
+                "back": "images/2400/2435..jpeg",
+                "primary": "images/2400/2435.jpeg"
+        },
+        {
+                "code": "2436",
+                "series": "2400",
+                "front": "images/2400/2436.jpeg",
+                "back": "images/2400/2436..jpeg",
+                "primary": "images/2400/2436.jpeg"
+        },
+        {
+                "code": "2438",
+                "series": "2400",
+                "front": "images/2400/2438.jpeg",
+                "back": null,
+                "primary": "images/2400/2438.jpeg"
+        },
+        {
+                "code": "2439",
+                "series": "2400",
+                "front": "images/2400/2439.jpeg",
+                "back": "images/2400/2439..jpeg",
+                "primary": "images/2400/2439.jpeg"
+        },
+        {
+                "code": "2466",
+                "series": "2400",
+                "front": "images/2400/2466.jpeg",
+                "back": "images/2400/2466..jpeg",
+                "primary": "images/2400/2466.jpeg"
+        },
+        {
+                "code": "2471",
+                "series": "2400",
+                "front": "images/2400/2471.jpeg",
+                "back": "images/2400/2471..jpeg",
+                "primary": "images/2400/2471.jpeg"
+        },
+        {
+                "code": "2472",
+                "series": "2400",
+                "front": "images/2400/2472.jpeg",
+                "back": "images/2400/2472..jpeg",
+                "primary": "images/2400/2472.jpeg"
+        },
+        {
+                "code": "2473",
+                "series": "2400",
+                "front": "images/2400/2473.jpeg",
+                "back": "images/2400/2473..jpeg",
+                "primary": "images/2400/2473.jpeg"
+        },
+        {
+                "code": "2478",
+                "series": "2400",
+                "front": "images/2400/2478.jpeg",
+                "back": "images/2400/2478..jpeg",
+                "primary": "images/2400/2478.jpeg"
+        },
+        {
+                "code": "2479",
+                "series": "2400",
+                "front": "images/2400/2479.jpeg",
+                "back": "images/2400/2479..jpeg",
+                "primary": "images/2400/2479.jpeg"
+        },
+        {
+                "code": "2482",
+                "series": "2400",
+                "front": "images/2400/2482.jpeg",
+                "back": "images/2400/2482..jpeg",
+                "primary": "images/2400/2482.jpeg"
+        },
+        {
+                "code": "2483",
+                "series": "2400",
+                "front": "images/2400/2483.jpeg",
+                "back": "images/2400/2483..jpeg",
+                "primary": "images/2400/2483.jpeg"
+        },
+        {
+                "code": "2484",
+                "series": "2400",
+                "front": "images/2400/2484.jpeg",
+                "back": "images/2400/2484..jpeg",
+                "primary": "images/2400/2484.jpeg"
+        },
+        {
+                "code": "2501",
+                "series": "2500",
+                "front": "images/2500/2501.jpeg",
+                "back": "images/2500/2501..jpeg",
+                "primary": "images/2500/2501.jpeg"
+        },
+        {
+                "code": "2502",
+                "series": "2500",
+                "front": "images/2500/2502.jpeg",
+                "back": "images/2500/2502..jpeg",
+                "primary": "images/2500/2502.jpeg"
+        },
+        {
+                "code": "2503",
+                "series": "2500",
+                "front": "images/2500/2503.jpeg",
+                "back": "images/2500/2503..jpeg",
+                "primary": "images/2500/2503.jpeg"
+        },
+        {
+                "code": "2504",
+                "series": "2500",
+                "front": "images/2500/2504.jpeg",
+                "back": "images/2500/2504..jpeg",
+                "primary": "images/2500/2504.jpeg"
+        },
+        {
+                "code": "2505",
+                "series": "2500",
+                "front": "images/2500/2505.jpeg",
+                "back": "images/2500/2505..jpeg",
+                "primary": "images/2500/2505.jpeg"
+        },
+        {
+                "code": "2506",
+                "series": "2500",
+                "front": "images/2500/2506.jpeg",
+                "back": "images/2500/2506..jpeg",
+                "primary": "images/2500/2506.jpeg"
+        },
+        {
+                "code": "2507",
+                "series": "2500",
+                "front": "images/2500/2507.jpeg",
+                "back": "images/2500/2507..jpeg",
+                "primary": "images/2500/2507.jpeg"
+        },
+        {
+                "code": "2508",
+                "series": "2500",
+                "front": "images/2500/2508.jpeg",
+                "back": "images/2500/2508..jpeg",
+                "primary": "images/2500/2508.jpeg"
+        },
+        {
+                "code": "2509",
+                "series": "2500",
+                "front": "images/2500/2509.jpeg",
+                "back": "images/2500/2509..jpeg",
+                "primary": "images/2500/2509.jpeg"
+        },
+        {
+                "code": "2510",
+                "series": "2500",
+                "front": "images/2500/2510.jpeg",
+                "back": "images/2500/2510..jpeg",
+                "primary": "images/2500/2510.jpeg"
+        },
+        {
+                "code": "2511",
+                "series": "2500",
+                "front": "images/2500/2511.jpeg",
+                "back": "images/2500/2511..jpeg",
+                "primary": "images/2500/2511.jpeg"
+        },
+        {
+                "code": "2512",
+                "series": "2500",
+                "front": "images/2500/2512.jpeg",
+                "back": "images/2500/2512..jpeg",
+                "primary": "images/2500/2512.jpeg"
+        },
+        {
+                "code": "2513",
+                "series": "2500",
+                "front": "images/2500/2513.jpeg",
+                "back": "images/2500/2513..jpeg",
+                "primary": "images/2500/2513.jpeg"
+        },
+        {
+                "code": "2514",
+                "series": "2500",
+                "front": "images/2500/2514.jpeg",
+                "back": "images/2500/2514..jpeg",
+                "primary": "images/2500/2514.jpeg"
+        },
+        {
+                "code": "2515",
+                "series": "2500",
+                "front": "images/2500/2515.jpeg",
+                "back": "images/2500/2515..jpeg",
+                "primary": "images/2500/2515.jpeg"
+        },
+        {
+                "code": "2516",
+                "series": "2500",
+                "front": "images/2500/2516.jpeg",
+                "back": "images/2500/2516..jpeg",
+                "primary": "images/2500/2516.jpeg"
+        },
+        {
+                "code": "2517",
+                "series": "2500",
+                "front": "images/2500/2517.jpeg",
+                "back": "images/2500/2517..jpeg",
+                "primary": "images/2500/2517.jpeg"
+        },
+        {
+                "code": "2518",
+                "series": "2500",
+                "front": "images/2500/2518.jpeg",
+                "back": "images/2500/2518..jpeg",
+                "primary": "images/2500/2518.jpeg"
+        },
+        {
+                "code": "2519",
+                "series": "2500",
+                "front": "images/2500/2519.jpeg",
+                "back": "images/2500/2519..jpeg",
+                "primary": "images/2500/2519.jpeg"
+        },
+        {
+                "code": "2520",
+                "series": "2500",
+                "front": "images/2500/2520.jpeg",
+                "back": "images/2500/2520..jpeg",
+                "primary": "images/2500/2520.jpeg"
+        },
+        {
+                "code": "2521",
+                "series": "2500",
+                "front": "images/2500/2521.jpeg",
+                "back": "images/2500/2521..jpeg",
+                "primary": "images/2500/2521.jpeg"
+        },
+        {
+                "code": "2522",
+                "series": "2500",
+                "front": "images/2500/2522.jpeg",
+                "back": "images/2500/2522..jpeg",
+                "primary": "images/2500/2522.jpeg"
+        },
+        {
+                "code": "2523",
+                "series": "2500",
+                "front": "images/2500/2523.jpeg",
+                "back": "images/2500/2523..jpeg",
+                "primary": "images/2500/2523.jpeg"
+        },
+        {
+                "code": "2524",
+                "series": "2500",
+                "front": "images/2500/2524.jpeg",
+                "back": "images/2500/2524..jpeg",
+                "primary": "images/2500/2524.jpeg"
+        },
+        {
+                "code": "2525",
+                "series": "2500",
+                "front": "images/2500/2525.jpeg",
+                "back": "images/2500/2525..jpeg",
+                "primary": "images/2500/2525.jpeg"
+        },
+        {
+                "code": "2526",
+                "series": "2500",
+                "front": "images/2500/2526.jpeg",
+                "back": "images/2500/2526..jpeg",
+                "primary": "images/2500/2526.jpeg"
+        },
+        {
+                "code": "2527",
+                "series": "2500",
+                "front": "images/2500/2527.jpeg",
+                "back": "images/2500/2527..jpeg",
+                "primary": "images/2500/2527.jpeg"
+        },
+        {
+                "code": "2528",
+                "series": "2500",
+                "front": "images/2500/2528.jpeg",
+                "back": "images/2500/2528..jpeg",
+                "primary": "images/2500/2528.jpeg"
+        },
+        {
+                "code": "2529",
+                "series": "2500",
+                "front": "images/2500/2529.jpeg",
+                "back": "images/2500/2529..jpeg",
+                "primary": "images/2500/2529.jpeg"
+        },
+        {
+                "code": "2530",
+                "series": "2500",
+                "front": "images/2500/2530.jpeg",
+                "back": "images/2500/2530..jpeg",
+                "primary": "images/2500/2530.jpeg"
+        },
+        {
+                "code": "2531",
+                "series": "2500",
+                "front": "images/2500/2531.jpeg",
+                "back": "images/2500/2531..jpeg",
+                "primary": "images/2500/2531.jpeg"
+        },
+        {
+                "code": "2532",
+                "series": "2500",
+                "front": "images/2500/2532.jpeg",
+                "back": "images/2500/2532..jpeg",
+                "primary": "images/2500/2532.jpeg"
+        },
+        {
+                "code": "2533",
+                "series": "2500",
+                "front": "images/2500/2533.jpeg",
+                "back": null,
+                "primary": "images/2500/2533.jpeg"
+        },
+        {
+                "code": "2534",
+                "series": "2500",
+                "front": "images/2500/2534.jpeg",
+                "back": "images/2500/2534..jpeg",
+                "primary": "images/2500/2534.jpeg"
+        },
+        {
+                "code": "2539",
+                "series": "2500",
+                "front": "images/2500/2539.jpeg",
+                "back": "images/2500/2539..jpeg",
+                "primary": "images/2500/2539.jpeg"
+        },
+        {
+                "code": "2544",
+                "series": "2500",
+                "front": "images/2500/2544.jpeg",
+                "back": "images/2500/2544..jpeg",
+                "primary": "images/2500/2544.jpeg"
+        },
+        {
+                "code": "2545",
+                "series": "2500",
+                "front": "images/2500/2545.jpeg",
+                "back": "images/2500/2545..jpeg",
+                "primary": "images/2500/2545.jpeg"
+        },
+        {
+                "code": "2546",
+                "series": "2500",
+                "front": "images/2500/2546.jpeg",
+                "back": "images/2500/2546..jpeg",
+                "primary": "images/2500/2546.jpeg"
+        },
+        {
+                "code": "2547",
+                "series": "2500",
+                "front": "images/2500/2547.jpeg",
+                "back": "images/2500/2547..jpeg",
+                "primary": "images/2500/2547.jpeg"
+        },
+        {
+                "code": "2548",
+                "series": "2500",
+                "front": "images/2500/2548.jpeg",
+                "back": "images/2500/2548..jpeg",
+                "primary": "images/2500/2548.jpeg"
+        },
+        {
+                "code": "2549",
+                "series": "2500",
+                "front": "images/2500/2549.jpeg",
+                "back": "images/2500/2549..jpeg",
+                "primary": "images/2500/2549.jpeg"
+        },
+        {
+                "code": "2550",
+                "series": "2500",
+                "front": "images/2500/2550.jpeg",
+                "back": "images/2500/2550..jpeg",
+                "primary": "images/2500/2550.jpeg"
+        },
+        {
+                "code": "2551",
+                "series": "2500",
+                "front": "images/2500/2551.jpeg",
+                "back": "images/2500/2551..jpeg",
+                "primary": "images/2500/2551.jpeg"
+        },
+        {
+                "code": "2552",
+                "series": "2500",
+                "front": "images/2500/2552.jpeg",
+                "back": "images/2500/2552..jpeg",
+                "primary": "images/2500/2552.jpeg"
+        },
+        {
+                "code": "2553",
+                "series": "2500",
+                "front": "images/2500/2553.jpeg",
+                "back": "images/2500/2553..jpeg",
+                "primary": "images/2500/2553.jpeg"
+        },
+        {
+                "code": "2554",
+                "series": "2500",
+                "front": "images/2500/2554.jpeg",
+                "back": "images/2500/2554..jpeg",
+                "primary": "images/2500/2554.jpeg"
+        },
+        {
+                "code": "2574",
+                "series": "2500",
+                "front": "images/2500/2574.jpeg",
+                "back": "images/2500/2574..jpeg",
+                "primary": "images/2500/2574.jpeg"
+        },
+        {
+                "code": "2575",
+                "series": "2500",
+                "front": "images/2500/2575.jpeg",
+                "back": "images/2500/2575..jpeg",
+                "primary": "images/2500/2575.jpeg"
+        },
+        {
+                "code": "2577",
+                "series": "2500",
+                "front": "images/2500/2577.jpeg",
+                "back": "images/2500/2577..jpeg",
+                "primary": "images/2500/2577.jpeg"
+        },
+        {
+                "code": "2594",
+                "series": "2500",
+                "front": "images/2500/2594.jpeg",
+                "back": "images/2500/2594..jpeg",
+                "primary": "images/2500/2594.jpeg"
+        },
+        {
+                "code": "2595",
+                "series": "2500",
+                "front": "images/2500/2595.jpeg",
+                "back": "images/2500/2595..jpeg",
+                "primary": "images/2500/2595.jpeg"
+        },
+        {
+                "code": "2596",
+                "series": "2500",
+                "front": "images/2500/2596.jpeg",
+                "back": "images/2500/2596..jpeg",
+                "primary": "images/2500/2596.jpeg"
+        },
+        {
+                "code": "2597",
+                "series": "2500",
+                "front": "images/2500/2597.jpeg",
+                "back": "images/2500/2597..jpeg",
+                "primary": "images/2500/2597.jpeg"
+        },
+        {
+                "code": "2598",
+                "series": "2500",
+                "front": "images/2500/2598.jpeg",
+                "back": "images/2500/2598..jpeg",
+                "primary": "images/2500/2598.jpeg"
+        },
+        {
+                "code": "2599",
+                "series": "2500",
+                "front": "images/2500/2599.jpeg",
+                "back": "images/2500/2599..jpeg",
+                "primary": "images/2500/2599.jpeg"
+        },
+        {
+                "code": "2703",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2703.jpeg",
+                "back": null,
+                "primary": "images/2700/2703.jpeg"
+        },
+        {
+                "code": "2704",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2704.jpeg",
+                "back": null,
+                "primary": "images/2700/2704.jpeg"
+        },
+        {
+                "code": "2706",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2706.jpeg",
+                "back": null,
+                "primary": "images/2700/2706.jpeg"
+        },
+        {
+                "code": "2707",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2707.jpeg",
+                "back": null,
+                "primary": "images/2700/2707.jpeg"
+        },
+        {
+                "code": "2708",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2708.jpeg",
+                "back": null,
+                "primary": "images/2700/2708.jpeg"
+        },
+        {
+                "code": "2710",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2710.jpeg",
+                "back": null,
+                "primary": "images/2700/2710.jpeg"
+        },
+        {
+                "code": "2714",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2714.jpeg",
+                "back": null,
+                "primary": "images/2700/2714.jpeg"
+        },
+        {
+                "code": "2715",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2715.jpeg",
+                "back": null,
+                "primary": "images/2700/2715.jpeg"
+        },
+        {
+                "code": "2716",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2716.jpeg",
+                "back": null,
+                "primary": "images/2700/2716.jpeg"
+        },
+        {
+                "code": "2717",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2717.jpeg",
+                "back": null,
+                "primary": "images/2700/2717.jpeg"
+        },
+        {
+                "code": "2718",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2718.jpeg",
+                "back": null,
+                "primary": "images/2700/2718.jpeg"
+        },
+        {
+                "code": "2720",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2720.jpeg",
+                "back": null,
+                "primary": "images/2700/2720.jpeg"
+        },
+        {
+                "code": "2722",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2722.jpeg",
+                "back": null,
+                "primary": "images/2700/2722.jpeg"
+        },
+        {
+                "code": "2723",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2723.jpeg",
+                "back": null,
+                "primary": "images/2700/2723.jpeg"
+        },
+        {
+                "code": "2724",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2724.jpeg",
+                "back": null,
+                "primary": "images/2700/2724.jpeg"
+        },
+        {
+                "code": "2725",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2725.jpeg",
+                "back": null,
+                "primary": "images/2700/2725.jpeg"
+        },
+        {
+                "code": "2729",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2729.jpeg",
+                "back": null,
+                "primary": "images/2700/2729.jpeg"
+        },
+        {
+                "code": "2731",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2731.jpeg",
+                "back": null,
+                "primary": "images/2700/2731.jpeg"
+        },
+        {
+                "code": "2737",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2737.jpeg",
+                "back": null,
+                "primary": "images/2700/2737.jpeg"
+        },
+        {
+                "code": "2738",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2738.jpeg",
+                "back": null,
+                "primary": "images/2700/2738.jpeg"
+        },
+        {
+                "code": "2739",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2739.jpeg",
+                "back": null,
+                "primary": "images/2700/2739.jpeg"
+        },
+        {
+                "code": "2741",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2741.jpeg",
+                "back": null,
+                "primary": "images/2700/2741.jpeg"
+        },
+        {
+                "code": "2742",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2742.jpeg",
+                "back": "images/2700/2742..jpeg",
+                "primary": "images/2700/2742.jpeg"
+        },
+        {
+                "code": "2747",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2747.jpeg",
+                "back": null,
+                "primary": "images/2700/2747.jpeg"
+        },
+        {
+                "code": "2749",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2749.jpeg",
+                "back": null,
+                "primary": "images/2700/2749.jpeg"
+        },
+        {
+                "code": "2757",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2757.jpeg",
+                "back": null,
+                "primary": "images/2700/2757.jpeg"
+        },
+        {
+                "code": "2758",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2758.jpeg",
+                "back": null,
+                "primary": "images/2700/2758.jpeg"
+        },
+        {
+                "code": "2761",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2761.jpeg",
+                "back": null,
+                "primary": "images/2700/2761.jpeg"
+        },
+        {
+                "code": "2762",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2762.jpeg",
+                "back": null,
+                "primary": "images/2700/2762.jpeg"
+        },
+        {
+                "code": "2764",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2764.jpeg",
+                "back": null,
+                "primary": "images/2700/2764.jpeg"
+        },
+        {
+                "code": "2766",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2766.jpeg",
+                "back": null,
+                "primary": "images/2700/2766.jpeg"
+        },
+        {
+                "code": "2771",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2771.jpeg",
+                "back": null,
+                "primary": "images/2700/2771.jpeg"
+        },
+        {
+                "code": "2772",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2772.jpeg",
+                "back": null,
+                "primary": "images/2700/2772.jpeg"
+        },
+        {
+                "code": "2780",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2780.jpeg",
+                "back": null,
+                "primary": "images/2700/2780.jpeg"
+        },
+        {
+                "code": "2782",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2782.jpeg",
+                "back": null,
+                "primary": "images/2700/2782.jpeg"
+        },
+        {
+                "code": "2783",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2783.jpeg",
+                "back": null,
+                "primary": "images/2700/2783.jpeg"
+        },
+        {
+                "code": "2788",
+                "series": "Shagun Envelope",
+                "front": "images/2700/2788.jpeg",
+                "back": null,
+                "primary": "images/2700/2788.jpeg"
+        }
+];
+
+
+        const grid = document.getElementById('grid');
+        const searchInput = document.getElementById('searchInput');
+        const searchBtn = document.getElementById('searchBtn');
+        const showCount = document.getElementById('showCount');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const imgModal = document.getElementById('imgModal');
+        const modalImg = document.getElementById('modalImg');
+        const modalCode = document.getElementById('modalCode');
+        const imgModalClose = document.getElementById('imgModalClose');
+        const toTop = document.getElementById('toTop');
+
+        let activeSeries = 'all';
+        let searchTerm = '';
+        let zoomLevel = 1;
+
+        function render() {
+            grid.innerHTML = '';
+            let filtered = products;
+
+            if (activeSeries !== 'all') {
+                filtered = filtered.filter(p => p.series === activeSeries);
+            }
+
+            if (searchTerm) {
+                filtered = filtered.filter(p => p.code.includes(searchTerm));
+            }
+
+            showCount.textContent = filtered.length;
+
+            if (filtered.length === 0) {
+                grid.innerHTML = '<div class="no-results"><i class="fas fa-search"></i><p>No products found</p></div>';
+                return;
+            }
+
+            filtered.forEach(p => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.setAttribute('data-code', p.code);
+
+                const hasFlip = p.front && p.back;
+                const flipHtml = hasFlip
+                    ? `<button class="flip-btn" title="Flip"><i class="fas fa-sync-alt"></i></button>`
+                    : '';
+
+                card.innerHTML = `
+                    <div class="card-img" data-code="${p.code}" data-front="${p.front || ''}" data-back="${p.back || ''}">
+                        <img src="${p.primary}" alt="${p.code}" loading="lazy">
+                        ${flipHtml}
+                    </div>
+                    <div class="card-body">
+                        <div class="card-code">#${p.code}</div>
+                        <div class="card-series">${p.series === 'Shagun Envelope' ? 'Shagun Envelope' : p.series + ' Series'}</div>
+                        <div class="card-downloads">
+                            <button class="dl-btn" data-img="${p.primary}" data-fmt="jpg">JPG</button>
+                            <button class="dl-btn" data-img="${p.primary}" data-fmt="png">PNG</button>
+                            <button class="dl-btn" data-img="${p.primary}" data-fmt="pdf">PDF</button>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+
+            attachEvents();
+        }
+
+        function attachEvents() {
+            grid.querySelectorAll('.card-img').forEach(el => {
+                el.addEventListener('click', function(e) {
+                    if (e.target.closest('.flip-btn')) return;
+                    const img = this.querySelector('img');
+                    openModal(img.src, this.dataset.code);
+                });
+            });
+
+            grid.querySelectorAll('.flip-btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const container = this.closest('.card-img');
+                    const img = container.querySelector('img');
+                    const front = container.dataset.front;
+                    const back = container.dataset.back;
+                    if (!front || !back) return;
+                    img.src = img.src.includes(front.split('/').pop()) ? back : front;
+                    const card = this.closest('.product-card');
+                    card.querySelectorAll('.dl-btn').forEach(d => d.dataset.img = img.src);
+                });
+            });
+
+            grid.querySelectorAll('.dl-btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    downloadImage(this.dataset.img, this.dataset.fmt);
+                });
+            });
+        }
+
+        // Filters
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                activeSeries = this.dataset.filter;
+                render();
+            });
+        });
+
+        // Search
+        searchInput.addEventListener('input', function() {
+            searchTerm = this.value.trim();
+            render();
+        });
+
+        searchBtn.addEventListener('click', function() {
+            searchTerm = searchInput.value.trim();
+            render();
+            const first = grid.querySelector('.product-card');
+            if (first && searchTerm) {
+                first.classList.add('highlight');
+                first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                setTimeout(() => first.classList.remove('highlight'), 2500);
+            }
+        });
+
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') searchBtn.click();
+        });
+
+        // Modal
+        function openModal(src, code) {
+            modalImg.src = src;
+            modalCode.textContent = '#' + code;
+            imgModal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+            zoomLevel = 1;
+            modalImg.style.transform = 'scale(1)';
+            modalImg.classList.remove('zoomed');
+        }
+
+        function closeModal() {
+            imgModal.classList.remove('open');
+            document.body.style.overflow = '';
+            zoomLevel = 1;
+            modalImg.style.transform = 'scale(1)';
+            modalImg.classList.remove('zoomed');
+        }
+
+        imgModalClose.addEventListener('click', closeModal);
+        imgModal.addEventListener('click', function(e) {
+            if (e.target === imgModal) closeModal();
+        });
+
+        document.getElementById('zIn').addEventListener('click', () => {
+            if (zoomLevel < 5) { zoomLevel += 0.5; modalImg.style.transform = `scale(${zoomLevel})`; if (zoomLevel > 1) modalImg.classList.add('zoomed'); }
+        });
+        document.getElementById('zOut').addEventListener('click', () => {
+            if (zoomLevel > 1) { zoomLevel -= 0.5; modalImg.style.transform = `scale(${zoomLevel})`; if (zoomLevel <= 1) modalImg.classList.remove('zoomed'); }
+        });
+        document.getElementById('zReset').addEventListener('click', () => {
+            zoomLevel = 1; modalImg.style.transform = 'scale(1)'; modalImg.classList.remove('zoomed');
+        });
+
+        modalImg.addEventListener('wheel', function(e) {
+            e.preventDefault();
+            if (e.deltaY < 0 && zoomLevel < 5) { zoomLevel += 0.5; }
+            else if (e.deltaY > 0 && zoomLevel > 1) { zoomLevel -= 0.5; }
+            modalImg.style.transform = `scale(${zoomLevel})`;
+            if (zoomLevel > 1) modalImg.classList.add('zoomed'); else modalImg.classList.remove('zoomed');
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeModal();
+        });
+
+        // Back to top
+        window.addEventListener('scroll', function() {
+            toTop.classList.toggle('show', window.scrollY > 400);
+        });
+        toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // Mobile menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('main-nav');
+
+        mobileMenuBtn.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
+            const icon = this.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Contact Modal
+        const contactModal = document.getElementById('contactModal');
+        const contactModalClose = document.getElementById('contactModalClose');
+        const contactLink = document.getElementById('contactLink');
+
+        contactLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            contactModal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
+
+        contactModalClose.addEventListener('click', function() {
+            contactModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        window.addEventListener('click', function(e) {
+            if (e.target === contactModal) {
+                contactModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            contactForm.reset();
+            contactModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                if (mainNav.classList.contains('active')) {
+                    mainNav.classList.remove('active');
+                    mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+                    mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+                }
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Download helpers
+        async function downloadImage(url, fmt) {
+            const name = sanitize(url.split('/').pop(), fmt);
+            if (fmt === 'pdf') {
+                try {
+                    const { jsPDF } = window.jspdf;
+                    const pdf = new jsPDF();
+                    const imgData = await toDataURL(url);
+                    const img = await loadImg(url);
+                    const pw = pdf.internal.pageSize.getWidth();
+                    const ph = pdf.internal.pageSize.getHeight();
+                    const r = Math.min(pw / img.width, ph / img.height);
+                    pdf.addImage(imgData, 'JPEG', (pw - img.width * r) / 2, (ph - img.height * r) / 2, img.width * r, img.height * r);
+                    pdf.save(name.replace(/\.(jpg|jpeg|png)$/i, '.pdf'));
+                } catch (err) {
+                    console.error(err);
+                    convert(url, 'image/jpeg', sanitize(url.split('/').pop(), 'jpg'));
+                }
+            } else {
+                convert(url, fmt === 'png' ? 'image/png' : 'image/jpeg', name);
+            }
+        }
+
+        async function convert(url, mime, fileName) {
+            const img = await loadImg(url);
+            const c = document.createElement('canvas');
+            c.width = img.width; c.height = img.height;
+            c.getContext('2d').drawImage(img, 0, 0);
+            const a = document.createElement('a');
+            a.href = c.toDataURL(mime); a.download = fileName;
+            document.body.appendChild(a); a.click(); document.body.removeChild(a);
+        }
+
+        function sanitize(f, ext) {
+            let b = f.split('?')[0].replace(/\.+/g, '.').replace(/\.(jpg|jpeg|png)$/i, '').replace(/[^a-zA-Z0-9_-]/g, '');
+            return b + '.' + ext;
+        }
+
+        function loadImg(u) {
+            return new Promise((res, rej) => { 
+                const i = new Image(); 
+                if (window.location.protocol !== 'file:') {
+                    i.crossOrigin = 'anonymous'; 
+                }
+                i.onload = () => res(i); 
+                i.onerror = rej; 
+                i.src = u; 
+            });
+        }
+
+        function toDataURL(u) {
+            return new Promise((res, rej) => {
+                const i = new Image(); 
+                if (window.location.protocol !== 'file:') {
+                    i.crossOrigin = 'anonymous';
+                }
+                i.onload = () => { const c = document.createElement('canvas'); c.width = i.width; c.height = i.height; c.getContext('2d').drawImage(i, 0, 0); res(c.toDataURL('image/jpeg')); };
+                i.onerror = rej; i.src = u;
+            });
+        }
+
+        // Initial render
+        render();
+    </script>
 </body>
 </html>
